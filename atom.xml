@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>TaosPlanet</title>
   
-  <subtitle>人间已晚，山河已秋</subtitle>
+  <subtitle>人间忽晚，山河已秋</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://castel-tao.github.io/"/>
-  <updated>2020-06-11T06:02:17.916Z</updated>
+  <updated>2020-06-11T07:21:58.920Z</updated>
   <id>https://castel-tao.github.io/</id>
   
   <author>
@@ -17,11 +17,99 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>随笔</title>
+    <link href="https://castel-tao.github.io/2020/06/11/sui-bi/"/>
+    <id>https://castel-tao.github.io/2020/06/11/sui-bi/</id>
+    <published>2020-06-11T07:21:09.171Z</published>
+    <updated>2020-06-11T07:21:58.920Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;就随便谢谢&quot;&gt;&lt;a href=&quot;#就随便谢谢&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="ggplot" scheme="https://castel-tao.github.io/tags/ggplot/"/>
+    
+      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tabplot函数</title>
+    <link href="https://castel-tao.github.io/2020/06/11/tabplot-han-shu/"/>
+    <id>https://castel-tao.github.io/2020/06/11/tabplot-han-shu/</id>
+    <published>2020-06-11T07:03:17.544Z</published>
+    <updated>2020-06-11T07:30:34.585Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;首先用devtools安装&lt;/p&gt;
+&lt;p&gt;然后运行：&lt;/p&gt;
+&lt;pre class=&quot; language-R&quot;&gt;&lt;code class=&quot;language-R&quot;&gt;library(tabplot)
+
+diamonds %&gt;%
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="ggplot" scheme="https://castel-tao.github.io/tags/ggplot/"/>
+    
+      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
+    
+      <category term="data visualization" scheme="https://castel-tao.github.io/tags/data-visualization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>apply族函数</title>
+    <link href="https://castel-tao.github.io/2020/06/11/apply-zu-han-shu/"/>
+    <id>https://castel-tao.github.io/2020/06/11/apply-zu-han-shu/</id>
+    <published>2020-06-11T07:00:14.583Z</published>
+    <updated>2020-06-11T07:26:47.019Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;其实也没必要记住这么多，不会用了查就行**&lt;/p&gt;
+&lt;p&gt;lapply&lt;br&gt;|&lt;br&gt;|-&amp;gt; 简化版: sapply&lt;br&gt;| | -&amp;gt; 可设置返回值模板: vapply&lt;br&gt;| |-&amp;gt; 多变量版: mapply&lt;br&gt;|&lt;br&gt;|-&amp;gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
+    
+      <category term="data cleaning" scheme="https://castel-tao.github.io/tags/data-cleaning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常用Figures</title>
     <link href="https://castel-tao.github.io/2020/06/10/chang-yong-figures/"/>
     <id>https://castel-tao.github.io/2020/06/10/chang-yong-figures/</id>
     <published>2020-06-10T06:38:27.315Z</published>
-    <updated>2020-06-11T06:02:17.916Z</updated>
+    <updated>2020-06-11T07:26:37.437Z</updated>
     
     <summary type="html">
     

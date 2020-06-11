@@ -4,6 +4,71 @@
   
     
     <entry>
+      <title>随笔</title>
+      <link href="/2020/06/11/sui-bi/"/>
+      <url>/2020/06/11/sui-bi/</url>
+      
+        <content type="html"><![CDATA[<h2 id="就随便谢谢"><a href="#就随便谢谢" class="headerlink" title="就随便谢谢"></a>就随便谢谢</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ggplot </tag>
+            
+            <tag> R </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tabplot函数</title>
+      <link href="/2020/06/11/tabplot-han-shu/"/>
+      <url>/2020/06/11/tabplot-han-shu/</url>
+      
+        <content type="html"><![CDATA[<p>首先用devtools安装</p><p>然后运行：</p><pre class=" language-R"><code class="language-R">library(tabplot)diamonds %>% head()tableplot(diamonds)</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ggplot </tag>
+            
+            <tag> R </tag>
+            
+            <tag> data visualization </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>apply族函数</title>
+      <link href="/2020/06/11/apply-zu-han-shu/"/>
+      <url>/2020/06/11/apply-zu-han-shu/</url>
+      
+        <content type="html"><![CDATA[<p>其实也没必要记住这么多，不会用了查就行**</p><p>lapply<br>|<br>|-&gt; 简化版: sapply<br>| | -&gt; 可设置返回值模板: vapply<br>| |-&gt; 多变量版: mapply<br>|<br>|-&gt; 递归版: rapply</p><h2 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h2><ol><li>3个参数，(data，margin，FUN)</li><li>应用在matrix或array上</li></ol><h2 id="sweep"><a href="#sweep" class="headerlink" title="sweep"></a>sweep</h2><p>常常和apply一起用，sweep函数和apply函数相似，但是sweep主要用于array的计算，而apply更多的是矩阵和data.frame计算。</p><pre class=" language-R"><code class="language-R">> mean.att <- apply(attitude, 2, mean) #对attitude每一col取均值> sweep(attitude, 2, mean.att, FUN = "-") %>% head() #让attitude每一个值减去这列均值，这就是两个参数了，一个值，一个列均值      rating complaints privileges   learning     raises   critical   advance1 -21.633333      -15.6 -23.133333 -17.366667  -3.633333  17.233333  2.0666672  -1.633333       -2.6  -2.133333  -2.366667  -1.633333  -1.766667  4.0666673   6.366667        3.4  14.866667  12.633333  11.366667  11.233333  5.0666674  -3.633333       -3.6  -8.133333  -9.366667 -10.633333   9.233333 -7.9333335  16.366667       11.4   2.866667   9.633333   6.366667   8.233333  4.0666676 -21.633333      -11.6  -4.133333 -12.366667 -10.633333 -25.766667 -8.933333</code></pre><h2 id="tapply和aggregate"><a href="#tapply和aggregate" class="headerlink" title="tapply和aggregate"></a>tapply和aggregate</h2><p>tapply函数很有用，tapply的功能就是把数据按照某种分组，在每个组内进行某个运算。这个aggregate函数很像。我觉得还是aggregate好用。</p><pre class=" language-R"><code class="language-R">> aggregate(mtcars,by=list(mtcars$cyl,mtcars$gear),FUN=mean)...略> aggregate(mtcars,by=list(mtcars$gear),FUN=mean)  Group.1      mpg      cyl     disp       hp     drat       wt   qsec        vs        am1       3 16.10667 7.466667 326.3000 176.1333 3.132667 3.892600 17.692 0.2000000 0.00000002       4 24.53333 4.666667 123.0167  89.5000 4.043333 2.616667 18.965 0.8333333 0.66666673       5 21.38000 6.000000 202.4800 195.6000 3.916000 2.632600 15.640 0.2000000 1.0000000  gear     carb1    3 2.6666672    4 2.3333333    5 4.400000> aggregate(mtcars$qsec,by=list(mtcars$gear),FUN=mean)  Group.1      x1       3 17.6922       4 18.9653       5 15.640> aggregate(cbind(mpg,hp) ~ cyl+gear, FUN=mean)  cyl gear    mpg       hp1   4    3 21.500  97.00002   6    3 19.750 107.50003   8    3 15.050 194.16674   4    4 26.925  76.00005   6    4 19.750 116.50006   4    5 28.200 102.00007   6    5 19.700 175.00008   8    5 15.400 299.5000> tapply(mtcars$qsec,mtcars$gear, mean)     3      4      5 17.692 18.965 15.640 </code></pre><p><strong>还可以实现crosstable功能，这个很好用</strong></p><pre class=" language-R"><code class="language-R">> df <- data.frame(year=kronecker(2001:2003, rep(1,4)),                   loc=c('beijing','beijing','shanghai','shanghai'),                   type=rep(c('A','B'),6), sale=rep(1:12))> tapply(df$sale, df[,c('year','loc')], sum)      locyear   beijing shanghai  2001       3        7  2002      11       15  2003      19       23# 类似的aggregate就麻烦一些> aggregate(df$sale, by = list(df$year,df$loc),FUN= sum) %>% +     reshape2::dcast(Group.1~Group.2)  Group.1 beijing shanghai1    2001       3        72    2002      11       153    2003      19       23</code></pre><h2 id="sapply和lapply"><a href="#sapply和lapply" class="headerlink" title="sapply和lapply"></a>sapply和lapply</h2><ol><li>都只有两个参数，第一个参数是输入数据，第二个是函数。</li><li>都应用在一个vector或list上</li><li>sapply返回的是一个vector，但是lapply返回的是一个list。其实sapply可以理解成lapply的简化版，s就是simplify的意思。</li></ol><p>其它：为了让sapply返回array或matrix，simplify参数很好用。</p><pre class=" language-R"><code class="language-R">   sapply(1:5,function(x) matrix(x,2,2), simplify = "array")</code></pre><p>这两个sapply/lapply 常和unlist()，matrix()，as.dataframe()，函数一起使用</p><h2 id="mapply"><a href="#mapply" class="headerlink" title="mapply"></a>mapply</h2><ol><li>多变量版的sapply，很好用，m就是multi的意思。</li><li>返回值是vector或matrix</li></ol><p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200525153812.png" alt=""></p><p><strong>下面这段代码值得一看</strong></p><pre class=" language-R"><code class="language-R">Alco <- data.frame(AlcoholDrunk = c( "YES", "YES", "NO",  "YES", "YES", "YES", NA, "YES", "YES", "YES", "YES", "YES", "YES", "NO",  "NO",  "NO",  "NO", "YES"),                    AmountDrunk = c(3.0, 1.0,  NA ,3.0,  NA, 0.0,  NA, 0.0,  NA, 1.7,  NA,  NA, 0.0,  NA,  NA,  NA,  NA, 2.0))#这里AlcoholDrunk变量有三种类型的值，“YES”，表示有饮酒史；“NO”, 表示无饮酒史；NA, 表示数据不可获取。# alcohol函数实现的功能是：如果AlcoholDrunk是NA，直接返回NA，如果是NO，返回NO；否则返回AmountDrunk的数值。alcohol <- function(texVal, numVal){  if(is.na(texVal)) {return("NA")}  else if(texVal == "NO"){return("NO")}  else if(is.na(numVal)){return("amount Unknown")}  else {return(numVal)}}mapply(alcohol, Alco$AlcoholDrunk, Alco$AmountDrunk)  #两个变量</code></pre><h2 id="replicate"><a href="#replicate" class="headerlink" title="replicate"></a>replicate</h2><p>另外还有一个非常有用的函数<strong>replicate()</strong>，它可以将某个函数重复运行N次，常常用来生成较复杂的随机数。下面的例子即先建立一个函数，模拟扔两个骰子的点数之和，然后重复运行1000次。</p><pre class=" language-R"><code class="language-R"># 定义一个game函数game <- function() {n <- sample(1:6,2,replace=T) #这个sample()函数也挺有意思的，我想replicate()应该经常会和sample()连用return(sum(n))}replicate(n=1000,game())  #将game()函数重复运行1000次。</code></pre><h2 id="rapply"><a href="#rapply" class="headerlink" title="rapply"></a>rapply</h2><p>这个好像也非常有用</p><pre class=" language-R"><code class="language-R">rapply(list, FUN, classes="ANY", deflt=NULL, how=c("unlist", "replace", "list"), ...)</code></pre><p>rapply是递归版的lappy。基本原理是对list作遍历，如果其中有的元素仍然是list，则继续遍历；对于每个非list类型的元素，如果其类型是classes参数指定的类型之一，则调用FUN。classes=”ANY”表示匹配所有类型。</p><p>how参数用来指定操作方式，有三种：</p><p>a. “replace” 直接用调用FUN后的结果替换原list中原来的元素<br>b. “list” 新建一个list，元素类型在classes中的，调用FUN；不在classes中的类型，使用deflt。会保留原始list的结构。<br>c. “unlist” 相当于对”list”模式下的结果调用unlist(recursive=TRUE)</p><p><strong>看完下面的例子你就明白了</strong></p><pre class=" language-R"><code class="language-R">> lst <- list(a=list(aa=c(1:5), ab=c(0.1,0.2,0.25,0.3,0.33)),  #a list里两个元素+             b=list(ba=c(1:10)),   #b list里一个元素+             c=c('ha','m','k'))  #c 不是一个list； a,b,c共同构成了lst list> lst$a$a$aa[1] 1 2 3 4 5$a$ab[1] 0.10 0.20 0.25 0.30 0.33$b$b$ba [1]  1  2  3  4  5  6  7  8  9 10$c[1] "ha" "m"  "k" > rapply(lst, sum, how='list',classes = 'numeric')$a$a$aaNULL$a$ab[1] 1.18$b$b$baNULL$cNULL> rapply(lst, sum, how='unlist',classes = c('integer'))a.aa b.ba   15   55 > rapply(lst, sum, how='unlist',classes = c('integer','numeric')) a.aa  a.ab  b.ba 15.00  1.18 55.00 > rapply(lst, sum, how='unlist',classes = c('integer','numeric'),deflt="This is deflt")           a.aa            a.ab            b.ba               c            "15"          "1.18"            "55" "This is deflt" > rapply(lst, nchar, how='unlist',classes = "character", deflt="DEFLT")   a.aa    a.ab    b.ba      c1      c2      c3 "DEFLT" "DEFLT" "DEFLT"     "2"     "1"     "1" </code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> R </tag>
+            
+            <tag> data cleaning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用Figures</title>
       <link href="/2020/06/10/chang-yong-figures/"/>
       <url>/2020/06/10/chang-yong-figures/</url>

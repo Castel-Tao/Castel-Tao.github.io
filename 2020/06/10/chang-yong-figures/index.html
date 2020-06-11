@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="常用figures, TaosPlanet">
+    <meta name="keywords" content="常用Figures, TaosPlanet">
     <meta name="description" content="不可描述">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>常用figures | TaosPlanet</title>
+    <title>常用Figures | TaosPlanet</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,7 +310,7 @@
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'f1534392279bddbf9d43dde8701cb5be14b82f76ec6607bf8d6ad557f60f304e';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">常用figures</h1>
+                    <h1 class="description center-align post-title">常用Figures</h1>
                 </div>
             </div>
         </div>
@@ -338,114 +338,27 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        height: calc(100vh - 250px);
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ggplot/">
+                                <span class="chip bg-color">ggplot</span>
+                            </a>
+                        
+                            <a href="/tags/R/">
+                                <span class="chip bg-color">R</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -473,7 +386,378 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1441226072&auto=1&height=66"></iframe>
+
+<h2 id="How-to-output"><a href="#How-to-output" class="headerlink" title="How to output ?"></a>How to output ?</h2><pre class=" language-R"><code class="language-R"># 第一种
+png("./Figures/cor.all.png",width = 1350,height = 1350,units = "px")
+pn
+dev.off()
+
+# 第二种
+ggsave("c:/Users/TAOTAO/Desktop/Taimu.mountain/Diff_Finger_radar.png",width = 380,height = 380,units = 'mm')
+
+# 第三种
+library(export)
+graph2pdf(x=x, file=filen, aspectr=2, font = "Arial",   
+          height = 5, bg = "transparent")
+graph2ppt(x=x, file=filen, vector.graphic=FALSE, width=9, 
+          aspectr=sqrt(2), append = TRUE)
+graph2png(file=filen, fun=plot.fun, dpi=400, height = 5, aspectr=4)</code></pre>
+<h2 id="Barplot"><a href="#Barplot" class="headerlink" title="Barplot"></a>Barplot</h2><pre class=" language-R"><code class="language-R">ggplot(cor.box,aes(x=project,y=value,fill=variable))+
+          geom_bar(stat = "identity",position = position_dodge(),width=0.7) +
+          geom_errorbar(aes(ymin=value-sd,ymax=value+sd),
+                        width=0.3, position=position_dodge(0.7))+ #bar֮??????
+          theme_bw() + scale_fill_npg() + 
+          #scale_y_continuous(breaks = c(0,0.2,0.4,0.6,0.8,0.9,0.95,1.0),
+                   #  labels = c(0,0.2,0.4,0.6,0.8,0.9,0.95,1.0))+
+          geom_text(aes(label = round(cor.box$value,3)),vjust = 3,size=5,
+                    position = position_dodge(0.9))+
+          theme(axis.text = element_text(size =15),
+                axis.title = element_text(family ="Myriad",size=18),
+                legend.title = element_text(family ="Myriad",size=18,hjust = 0.5),
+                legend.text = element_text(size=15)
+                ) +
+          labs(x = "Projects", y = "Median Correlation of Log2 Intensity \n MCLI", 
+               fill = "Sample")</code></pre>
+<h2 id="Radar-plot"><a href="#Radar-plot" class="headerlink" title="Radar plot"></a>Radar plot</h2><pre class=" language-R"><code class="language-R">#Radar function
+coord_radar <- function (theta = "x", start = 0, direction = 1) 
+{  theta <- match.arg(theta, c("x", "y"))
+r <- if (theta == "x") 
+  "y"
+else "x"
+ggproto("CoordRadar", CoordPolar, theta = theta, r = r, start = start, 
+        direction = sign(direction),
+        is_linear = function(coord) TRUE)}
+
+#
+names(hehe) <- c("organ","tea","tem_scaled")
+hehe %>% 
+    ggplot(aes(x=organ, y=tem_scaled,group=tea, fill=tea,color=tea))+
+    geom_polygon(color="black",alpha=.1,size=0.5) +
+    geom_point(size=4,shape=21,alpha=.5)+
+    coord_radar() +
+    theme_bw() +
+    #facet_wrap(~variable,nrow=2) +
+    scale_fill_manual(values = c("#3d3b4f",'#4c8dae','#2edfa3','#dc3023','#b0a4e3','#f2be45','#3eede7')) +
+    scale_color_manual(values = c("#3d3b4f",'#4c8dae','#2edfa3','#dc3023','#b0a4e3','#f2be45','#3eede7')) +
+    theme(
+        axis.title=element_text(size=30,face="plain",color="black"),
+        axis.text = element_text(size=24,face="plain",color="black",angle = myAngle),
+        panel.grid.major = element_line(color="grey80"),
+        axis.line = element_line(color="black"),
+        axis.ticks =  element_line(color="black"),
+        legend.text = element_text(size=24))
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524140546.png" alt=""></p>
+<h2 id="Boxplot"><a href="#Boxplot" class="headerlink" title="Boxplot"></a>Boxplot</h2><h3 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a>箱线图</h3><pre class=" language-R"><code class="language-R">gg_data %>% ggplot(aes(x= diff, y= temperature, color= tea))+
+    geom_boxplot(size = 1.2) + 
+    theme_bw() +  my.theme +
+    scale_color_manual(values = c("#3d3b4f",'#4c8dae','#2edfa3','#dc3023','#b0a4e3','#f2be45','#3eede7')) +
+    labs(title = "Temperature Difference of Finger Front ")
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524141112.png" alt=""></p>
+<h3 id="云雨图"><a href="#云雨图" class="headerlink" title="云雨图"></a>云雨图</h3><pre class=" language-R"><code class="language-R">library(ggplot2)
+library(dplyr)
+
+"%||%" <- function(a, b) {
+  if (!is.null(a)) a else b
+}
+
+geom_flat_violin <- function(mapping = NULL, data = NULL, stat = "ydensity",
+                        position = "dodge", trim = TRUE, scale = "area",
+                        show.legend = NA, inherit.aes = TRUE, ...) {
+  layer(
+    data = data,
+    mapping = mapping,
+    stat = stat,
+    geom = GeomFlatViolin,
+    position = position,
+    show.legend = show.legend,
+    inherit.aes = inherit.aes,
+    params = list(
+      trim = trim,
+      scale = scale,
+      ...
+    )
+  )
+}
+
+#' @rdname ggplot2-ggproto
+#' @format NULL
+#' @usage NULL
+#' @export
+GeomFlatViolin <-
+  ggproto("GeomFlatViolin", Geom,
+          setup_data = function(data, params) {
+            data$width <- data$width %||%
+              params$width %||% (resolution(data$x, FALSE) * 0.9)
+
+            # ymin, ymax, xmin, and xmax define the bounding rectangle for each group
+            data %>%
+              group_by(group) %>%
+              mutate(ymin = min(y),
+                     ymax = max(y),
+                     xmin = x,
+                     xmax = x + width / 2)
+
+          },
+
+          draw_group = function(data, panel_scales, coord) {
+            # Find the points for the line to go all the way around
+            data <- transform(data, xminv = x,
+                              xmaxv = x + violinwidth * (xmax - x))
+
+            # Make sure it's sorted properly to draw the outline
+            newdata <- rbind(plyr::arrange(transform(data, x = xminv), y),
+                             plyr::arrange(transform(data, x = xmaxv), -y))
+
+            # Close the polygon: set first and last point the same
+            # Needed for coord_polar and such
+            newdata <- rbind(newdata, newdata[1,])
+
+            ggplot2:::ggname("geom_flat_violin", GeomPolygon$draw_panel(newdata, panel_scales, coord))
+          },
+
+          draw_key = draw_key_polygon,
+
+          default_aes = aes(weight = 1, colour = "grey20", fill = "white", size = 0.5,
+                            alpha = NA, linetype = "solid"),
+
+          required_aes = c("x", "y")
+)
+
+
+#
+gg_data %>% dplyr::filter(diff == "F5-F4") %>% 
+ggplot(aes(x= tea, y= temperature, fill=tea,color=tea))+
+    geom_flat_violin(position= position_nudge(x=.25)) + 
+    geom_jitter(width = .1 )+
+    geom_boxplot(width = .1, position= position_nudge(x=.25), fill="white",size=.5,color="black") + 
+    theme_bw() +  my.theme +
+    scale_color_manual(values = c("#3d3b4f",'#4c8dae','#2edfa3','#dc3023','#b0a4e3','#f2be45','#3eede7')) +
+    scale_fill_manual(values = c("#3d3b4f",'#4c8dae','#2edfa3','#dc3023','#b0a4e3','#f2be45','#3eede7')) +
+    labs(title = "Temperature Difference of Finger F5-F4 ")</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524140914.png" alt=""></p>
+<h2 id="Lineplot"><a href="#Lineplot" class="headerlink" title="Lineplot"></a>Lineplot</h2><p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144155.png" alt="">****</p>
+<pre class=" language-R"><code class="language-R">gg_data_1 <- read_csv("c:/Users/TAOTAO/Desktop/R.Code/Always/LinePlot.csv")
+gg_data_1 %>% 
+            ggplot(aes(y=tem_scaled,x=part, color=tea, shape=tea))+
+                geom_point(size = 4,alpha=.8) + 
+                theme_bw() + 
+                scale_color_manual(values = c("#3d3b4f",'#4c8dae','#2edfa3','#dc3023','#b0a4e3','#f2be45','#3eede7')) +  
+      geom_line(data=gg_data_1[which(gg_data_1$group_1=="R"),], 
+                aes(group=factor(JingLuo), linetype= factor(Jingluo)), size=1.4,alpha = .6) +
+      geom_line(data=gg_data_1[which(gg_data_1$group_1=="L"),], 
+                aes(group=factor(JingLuo), linetype= factor(Jingluo)), size=1.4,alpha = .6) </code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524141154.png" alt=""></p>
+<pre class=" language-R"><code class="language-R">hehe %>%  ggplot(aes(x=number,y=value,color=variable)) + 
+  geom_line(lwd=2) +  #,linetype = "dashed"
+  theme_bw() + scale_color_npg() +
+  scale_x_continuous(breaks = POG.df$number,labels = POG.df$gene.rank)+
+  scale_y_continuous(breaks = c(0.2,0.4,0.6,0.7,0.8,0.85,0.9,0.95),
+                     labels = c(0.2,0.4,0.6,0.7,0.8,0.85,0.9,0.95))+
+  theme(axis.text.x = element_text(angle = 30,vjust = 0.4))+
+  xlab("Gene ranking")+
+  ylab("Percentage of Overlapped Genes")
+  #geom_point(position = position_dodge(.2), size = 2)</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524141236.png" alt=""></p>
+<pre class=" language-R"><code class="language-R">tmp %>% dplyr::filter(type=="A") %>% 
+ggplot(aes(x = variable,y=value,fill=Percentile,color=Date)) + 
+  geom_line(lwd=3) + 
+  ylab("Mean Covrage")+
+  xlab("Normalized Position")+
+  theme_bw() + scale_color_nejm() +
+  theme(axis.title = element_text(size=25),
+        axis.text = element_text(size =25),
+        legend.text = element_text(size=20), #图例文字
+        legend.title = element_text(size=25,hjust = 0.5))</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524141303.png" alt=""></p>
+<h2 id="Scatter-plot"><a href="#Scatter-plot" class="headerlink" title="Scatter plot"></a>Scatter plot</h2><p>相关性矩阵图</p>
+<pre class=" language-R"><code class="language-R">HEHE2 %>%
+ pheatmap(show_rownames = T,
+           show_colnames = T,
+          cluster_rows = F,
+          cluster_cols = F,
+           display_numbers = TRUE,  #是否显示格子数值
+           number_color = "grey29",  #格子数值颜色
+           cutree_rows = 1,
+           cutree_cols = 1,
+           cellwidth = 45, cellheight = 45, 
+          #annotation_col = col_anno,
+           #annotation_colors = ann_colors,
+          #annotation_row = col_anno,
+           border_color = F,   #调整格子边缘
+           main = paste0("Correlation Matrix of all Sample"),      #标题
+           fontsize=15                   #标题size
+           )</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144202.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144533.png" alt=""></p>
+<h2 id="Paired-Scatter-Plot"><a href="#Paired-Scatter-Plot" class="headerlink" title="Paired Scatter Plot"></a>Paired Scatter Plot</h2><pre class=" language-R"><code class="language-R">library(GGally)
+panel.points <- function(data, mapping){
+  ggplot(data = data, mapping = mapping) +
+    geom_point(alpha=0.4,size=1.3,color='#177cb0')+ #3C5488FF
+    geom_abline(intercept = 0 , slope = 1 , color='#c93756', linetype='dashed', size=1)
+    #scale_x_continuous(limits=c(-7,17))+
+    #scale_y_continuous(limits=c(-7,17))
+}
+pn <- ggpairs(tmp2[7:ncol(tmp2)],mapping = ggplot2::aes(),
+  #title = paste0("Paired Scatter plot; ",i,"; ",format," 3000 genes"),
+  lower = list(continuous = panel.points),
+
+  #diag = list(continuous='barDiag'),
+
+  upper = list(
+    continuous = function(data, mapping, ...){
+    ggally_cor(data = data, mapping = mapping, size= 10)}
+    ) ) +
+  theme_light() +
+  theme(legend.position = "none", 
+        panel.grid.major = element_blank(), 
+        axis.ticks = element_blank(), 
+        strip.text = element_text(size =20), #调节小面标签大小
+        axis.text = element_text(size =15), #调节坐标轴字体大小
+
+        panel.border = element_rect(colour = "black", fill = NA))</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144046.png" alt=""></p>
+<h2 id="Density-plot"><a href="#Density-plot" class="headerlink" title="Density plot"></a>Density plot</h2><pre class=" language-R"><code class="language-R">tmptmp %>% 
+    ggplot(aes(x=value,fill=Sample_library,color=Sample_library)) +
+       geom_density(alpha=0.3,size=1.2) +
+       theme_bw() + scale_fill_nejm() + scale_color_nejm()+
+        labs(title = "Globle gene expression level",x= "log2 TPM")</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png" alt=""></p>
+<h2 id="VeenDiagram"><a href="#VeenDiagram" class="headerlink" title="VeenDiagram"></a>VeenDiagram</h2><pre class=" language-R"><code class="language-R">library (VennDiagram)
+venn.diagram(x=list(AGR=top2000.AGR, NVS=top2000.NVS,WuXi=top2000.WuX_Poly,ARD=top2000.ARD_Poly), 
+               "NT_Consensus_Diff_Platform.png", height = 2000, width = 2000, 
+               resolution =900, imagetype="png",col="gray",
+               fill=c("#574266","#bddd22","#ff2d51","#3eede7"), 
+               alpha=c(0.6, 0.6,0.6,0.6), lwd=0.5, cex=0.4, #lwd调节线条宽度,cex=0了文字就没有了，
+                                                                      #cex调节里面的标注大小
+               cat.dist=c(-0.07, -0.07, -0.05,-0.07), 
+               cat.pos=c(100, 260, 0,150),cat.cex=0.45, cat.col="black", #cat.调节数据集名称，
+                                                                     #cat.col和.pos似乎也可有可无
+               rotation.degree=180)    #rotation.degree是旋转角度的意思，可有可无</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144105.png" alt=""></p>
+<h2 id="PCA"><a href="#PCA" class="headerlink" title="PCA"></a>PCA</h2><pre class=" language-R"><code class="language-R"># PCA ---------------------------------------------------------------------
+tmp %>% tail()
+tmp2 <- tmp %>% dcast(gene~Single_ID) 
+tmp2 %>% dim()
+#然后PCA作图展示结果
+pc.cr <- prcomp(t(log2(tmp2[,-1] + 0.01)),retx = TRUE)
+pc <- round(summary(pc.cr)$importance[2,],2) 
+pca.result <- as.data.frame(pc.cr$x[,1:2])
+
+tmp1 <- tmp %>% dplyr::select(Single_ID,sample,library,year,project)
+hehe <- tmp1 %>% group_by(Single_ID,library,sample,project) %>% summarise() %>% as.data.frame()
+pca.result <- cbind(hehe,pca.result)
+
+pca.result %>% head()
+##PCA按照样本类型，建库策略分开
+pn <- ggplot(pca.result,aes(x=PC1,y=PC2,color=sample,shape=library))+
+      geom_point(size = 6,alpha=0.5) + 
+      theme_bw() + scale_color_nejm() +
+      xlab(paste0("PC1  ",pc[1])) +
+      ylab(paste0("PC2  ",pc[2])) 
+
+
+
+### 3D pca
+library(rgl)
+pca.result.3d <- as.data.frame(pc.cr$x[,1:3])
+pca.result.3d <- cbind(hehe,pca.result.3d)
+pca.result.3d %>% head
+
+scales::show_col(pal_nejm("default")(8))
+
+pca.result.3d$color <- "#BC3C29FF"
+pca.result.3d$color[pca.result.3d$sample == "B"] <- "#0072B5FF"
+pca.result.3d$color[pca.result.3d$library == "PolyA"] <- "#E18727FF"
+pca.result.3d$color[pca.result.3d$library == "Ribo"] <- "#20854EFF"
+within(pca.result.3d,
+plot3d(PC1,PC2,PC3,size=10,col = color)
+)
+
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144134.png" alt=""></p>
+<h2 id="HCA"><a href="#HCA" class="headerlink" title="HCA"></a>HCA</h2><pre class=" language-R"><code class="language-R">sample[sample == "A"] <- "#BC3C29FF"  #红
+sample[sample == "B"] <- "#0072B5FF"
+library[library == "Ribo"] <- "#E18727FF"   #黄
+library[library == "PolyA"] <- "#20854EFF"  #绿
+
+color <-  data.frame(library,sample) %>% as.matrix()
+myclust <- function(x){hclust(x,method="average")}
+
+library("gplots")
+library("heatmap.plus")
+showpanel <- function(col)
+{
+  image(z=matrix(1:100, ncol=1), col=col, xaxt="n", yaxt="n" )
+}
+showpanel(colorpanel(25,"#BC3C29FF","white","#0072B5FF"))
+
+heatmap.plus(as.matrix(center), col=colorpanel(15,"#0072B5FF","white","#BC3C29FF"),
+             labRow=F,labCol = F, 
+            scale="none", hclustfun=myclust, ColSideColors=color,
+          key=F, symkey=FALSE, dendrogram=c("none"),
+          density.info="none", trace="none", cexRow=0.5)
+
+library(export)
+graph2png(file="hehe.png",width=7,height=7)
+
+require(graphics)
+hc <- hclust(dist(t(as.matrix(center))),"average")
+plot(hc,axes = F)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144116.png" alt=""></p>
+<h2 id="火山图"><a href="#火山图" class="headerlink" title="火山图"></a>火山图</h2><pre class=" language-R"><code class="language-R"># 设置pvalue和logFC的阈值
+cut_off_pvalue = 0.05
+cut_off_logFC = 1
+# 根据阈值分别为上调基因设置‘up’，下调基因设置‘Down’，无差异设置‘Stable’，保存到change列
+data$change = ifelse(data$qvalue < cut_off_pvalue & abs(data$log2.fc.) >= cut_off_logFC, 
+                     ifelse(data$log2.fc.> cut_off_logFC ,'Up','Down'),'Stable')
+# 作图
+data %>% ggplot(aes(x= log2.fc. ,y=-log10(qvalue),color = change)) +
+  geom_point(aes(size = Abundance),alpha = 0.5 ) + 
+  labs(x = "log2 fold change", y = "-log10(qvalue) \n") +  
+  xlim(-4,4) + ylim(0,8) +         
+  geom_hline(yintercept = -log10(0.05),lty=4,lwd=0.6,alpha=0.8) +  
+  geom_vline(xintercept = c(1,-1),lty=4,lwd=0.6,alpha=0.8) +
+  theme_classic() + 
+  scale_color_manual(values=c("#546de5", "#d2dae2","#ff4757"))</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144832.png" alt=""></p>
+<h2 id="火山图2"><a href="#火山图2" class="headerlink" title="火山图2"></a>火山图2</h2><pre class=" language-R"><code class="language-R">data <- read.csv( "C:../asset/wuli.csv")
+data$Abundance <- (data$Y179.30 + data$Y179.40)/1000
+
+# 设置pvalue和logFC的阈值
+cut_off_pvalue = 0.05
+cut_off_logFC = 1
+# 根据阈值分别为上调基因设置‘up’，下调基因设置‘Down’，无差异设置‘Stable’，保存到change列
+data$change = ifelse(data$qvalue < cut_off_pvalue & abs(data$log2.fc.) >= cut_off_logFC, 
+                     ifelse(data$log2.fc.> cut_off_logFC ,'Up','Down'),'Stable')
+# 作图
+pn <- data %>% ggplot(aes(x= log2.fc. ,y=-log10(qvalue),color = change)) +
+  geom_point(aes(size = Abundance),alpha = 0.5 ) + 
+  labs(x = "log2 fold change", y = "-log10(qvalue) \n") +  
+  xlim(-4,4) + ylim(0,8) +         
+  geom_hline(yintercept = -log10(0.05),lty=4,lwd=0.6,alpha=0.8) +  
+  geom_vline(xintercept = c(1,-1),lty=4,lwd=0.6,alpha=0.8) +
+  theme_classic() + 
+  scale_color_manual(values=c("#546de5", "#d2dae2","#ff4757"))
+
+# 标记label
+data$label = ifelse(data$qvalue < cut_off_pvalue & abs(data$log2.fc.) >= 2.5, 
+                       as.character(data$Geneid),"")
+
+library(ggrepel)
+pn + geom_text_repel(data = data, aes(x = data$log2.fc., 
+                                      y = -log10(data$qvalue), 
+                                      label = label),
+                  size = 3,box.padding = unit(0.5, "lines"),
+                  point.padding = unit(0.8, "lines"), 
+                  segment.color = "black", 
+                  show.legend = FALSE)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200531165613.png" alt=""></p>
+
             </div>
             <hr/>
 
@@ -535,7 +819,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/ggplot/">
+                                    <span class="chip bg-color">ggplot</span>
+                                </a>
+                            
+                                <a href="/tags/R/">
+                                    <span class="chip bg-color">R</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -709,16 +1001,15 @@
                 <a href="/2020/06/10/chang-yong-figures/">
                     <div class="card-image">
                         
+                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png" class="responsive-img" alt="常用Figures">
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="常用figures">
-                        
-                        <span class="card-title">常用figures</span>
+                        <span class="card-title">常用Figures</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            常用图表的R代码，不定期更新中...
                         
                     </div>
                     <div class="publish-info">
@@ -734,6 +1025,18 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ggplot/">
+                        <span class="chip bg-color">ggplot</span>
+                    </a>
+                    
+                    <a href="/tags/R/">
+                        <span class="chip bg-color">R</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -844,100 +1147,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </style>
 
 
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
     
 
 </main>
@@ -952,7 +1161,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">73</span>
+            <span class="white-color">289</span>
             
 
             <br>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="随笔, TaosPlanet">
+    <meta name="keywords" content="群体间遗传距离, TaosPlanet">
     <meta name="description" content="时间最具有腐蚀力，洗尽了铅华，那夺目的荣耀最终都会成为过眼云烟，留不住的风景。--王安忆 《长恨歌》">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>随笔 | TaosPlanet</title>
+    <title>群体间遗传距离 | TaosPlanet</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200625001554.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">随笔</h1>
+                    <h1 class="description center-align post-title">群体间遗传距离</h1>
                 </div>
             </div>
         </div>
@@ -445,12 +445,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ggplot/">
-                                <span class="chip bg-color">ggplot</span>
+                            <a href="/tags/genetics/">
+                                <span class="chip bg-color">genetics</span>
                             </a>
                         
-                            <a href="/tags/R/">
-                                <span class="chip bg-color">R</span>
+                            <a href="/tags/population-genetics/">
+                                <span class="chip bg-color">population genetics</span>
+                            </a>
+                        
+                            <a href="/tags/arithmetic/">
+                                <span class="chip bg-color">arithmetic</span>
                             </a>
                         
                     </div>
@@ -465,28 +469,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-11
+                    2020-06-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-11
+                    2020-06-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    10 分
                 </div>
                 
 
@@ -501,7 +505,268 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="就随便谢谢"><a href="#就随便谢谢" class="headerlink" title="就随便谢谢"></a>就随便谢谢</h2>
+                <h3 id="01-Definition"><a href="#01-Definition" class="headerlink" title="01-Definition"></a><strong>01-Definition</strong></h3><h4 id="遗传距离"><a href="#遗传距离" class="headerlink" title="遗传距离"></a>遗传距离</h4><p>遗传距离是用来衡量物种之间或同一物种的群体之间的遗传差异（基因组差异）的程度，并且以某种数值进行度量。从本质上讲，遗传差异的任何数值测度，只要是在基因序列水平或是基因频率水平上，由不同个体、种群或种的数据计算而来，皆可定义为遗传距离<a href="#fn2">[2]</a>。</p>
+<ul>
+<li><h4 id="Identity-By-State-amp-Identity-By-Descent"><a href="#Identity-By-State-amp-Identity-By-Descent" class="headerlink" title="Identity By State &amp; Identity By Descent"></a>Identity By State &amp; Identity By Descent</h4></li>
+</ul>
+<p>A DNA segment is identical by state (IBS) in two or more individuals if they have identical nucleotide sequences in this segment. An IBS segment is identical by descent (IBD) in two or more individuals if they have inherited it from a common ancestor without recombination, that is, the segment has the same ancestral origin in these individuals<a href="#fn3">[3]</a>.</p>
+<ul>
+<li><h4 id="状态一致和同源一致"><a href="#状态一致和同源一致" class="headerlink" title="状态一致和同源一致"></a>状态一致和同源一致</h4></li>
+</ul>
+<p>在两个或两个以上的个体当中，如果一个 DNA 片段具有相同的核苷酸序列，就说这个 DNA 片段是状态一致（Identity By State, IBS），如果这个 IBS 片段是遗传自同一个祖先且中间过程没有发生过重组事件，就说这个片段是同源一致（Identity By Descent, IBD）。</p>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200625001554.png" alt=""></p>
+<p>IBD.png</p>
+<hr>
+<h4 id="02-Measures-of-Genetic-Distance"><a href="#02-Measures-of-Genetic-Distance" class="headerlink" title="02-Measures of Genetic Distance"></a><strong>02-Measures of Genetic Distance</strong></h4><hr>
+<ul>
+<li><h4 id="个体间遗传距离（Genetic-Distance-of-individuals）度量方法"><a href="#个体间遗传距离（Genetic-Distance-of-individuals）度量方法" class="headerlink" title="个体间遗传距离（Genetic Distance of individuals）度量方法"></a>个体间遗传距离（Genetic Distance of individuals）度量方法</h4></li>
+</ul>
+<p>目前，最为常用的个体间遗传距离的度量方法为<strong>共享等位基因差异（Allele Sharing Distance）</strong>，以及与之密切相关的计算指标<strong>状态一致性数量（dentity By State, IBS）或等位基因共享百分数（Proportion of Allele Sharing, ASP)</strong>。状态一致性数量是指在同一基因座（locus, loci）上，个体间拥有相同等位基因数量。等位基因共享百分比也可以称为等位基因共享类型是指在同一基因座上，个体间拥有相同等位基因的百分比（100%：完全共享，50%：部分共享，0：不共享）。</p>
+<ul>
+<li><h4 id="基于单个SNP位点理解两个个体之间遗传距离度量指标"><a href="#基于单个SNP位点理解两个个体之间遗传距离度量指标" class="headerlink" title="基于单个SNP位点理解两个个体之间遗传距离度量指标"></a>基于单个SNP位点理解两个个体之间遗传距离度量指标</h4></li>
+</ul>
+<p>对于一个二态性的（biallelic）SNP位点，通常有三种基因型：AA、Aa和aa。两个个体的基因型，个体间等位基因共享数量（状态一致数量），个体间等位基因共享类型（百分比）以及个体间遗传距离的数值测度见下表。</p>
+<table>
+<thead>
+<tr>
+<th>Individual 1</th>
+<th>Individual 2</th>
+<th>IBS</th>
+<th>ASP</th>
+<th>Genetic Distance</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AA</td>
+<td>AA</td>
+<td>2</td>
+<td>100%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Aa</td>
+<td>Aa</td>
+<td>2</td>
+<td>100%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>aa</td>
+<td>aa</td>
+<td>2</td>
+<td>100%</td>
+<td>0</td>
+</tr>
+<tr>
+<td>AA</td>
+<td>Aa</td>
+<td>1</td>
+<td>50%</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Aa</td>
+<td>AA</td>
+<td>1</td>
+<td>50%</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Aa</td>
+<td>aa</td>
+<td>1</td>
+<td>50%</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>aa</td>
+<td>Aa</td>
+<td>1</td>
+<td>50%</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>AA</td>
+<td>aa</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>aa</td>
+<td>AA</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h4 id="多个多态位点计算两个个体之间平均遗传距离"><a href="#多个多态位点计算两个个体之间平均遗传距离" class="headerlink" title="多个多态位点计算两个个体之间平均遗传距离"></a>多个多态位点计算两个个体之间<em>平均遗传距离</em></h4></li>
+</ul>
+<p><img src="https:////upload-images.jianshu.io/upload_images/13346368-50ec524182e6872d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/123/format/webp" alt="img"></p>
+<p>遗传距离公式.png</p>
+<ul>
+<li><p>其中</p>
+<ul>
+<li>L：个体间用于计算遗传距离的SNP位点数目；</li>
+<li>dkij = 0 ：个体 i 和个体 j 在位点 k 上的基因型完全相同（AA|AA；或者Aa|Aa；或者aa|aa）；</li>
+<li>dkij = 0.5 ：个体 i 和个体 j 在位点 k 上的基因型有一个等位基因相同（AA|Aa；或者aa|Aa）；</li>
+<li>dkij = 1 ：个体 i 和个体 j 在位点 k 上的基因型完全不相同（AA|aa）。</li>
+</ul>
+</li>
+<li><h4 id="多个个体构建遗传距离矩阵"><a href="#多个个体构建遗传距离矩阵" class="headerlink" title="多个个体构建遗传距离矩阵"></a>多个个体构建<em>遗传距离矩阵</em></h4></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Sample ID</th>
+<th>Individual 1</th>
+<th>Individual 2</th>
+<th>Individual 3</th>
+<th>Individual 4</th>
+<th>……</th>
+<th>Individual n</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Individual 1</strong></td>
+<td></td>
+<td>0.3</td>
+<td>0.4</td>
+<td>0.5</td>
+<td>…</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td><strong>Individual 2</strong></td>
+<td>0.3</td>
+<td></td>
+<td>0.4</td>
+<td>0.5</td>
+<td>…</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td><strong>Individual 3</strong></td>
+<td>0.4</td>
+<td>0.4</td>
+<td></td>
+<td>0.8</td>
+<td>…</td>
+<td>0.7</td>
+</tr>
+<tr>
+<td><strong>Individual 4</strong></td>
+<td>0.5</td>
+<td>0.5</td>
+<td>0.8</td>
+<td></td>
+<td>…</td>
+<td>0.6</td>
+</tr>
+<tr>
+<td><strong>……</strong></td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td></td>
+<td>0.7</td>
+</tr>
+<tr>
+<td><strong>Individual n</strong></td>
+<td>0.5</td>
+<td>0.6</td>
+<td>0.7</td>
+<td>0.6</td>
+<td>0.7</td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li><h4 id="利用-PLINK-v1-9-软件构建-IBS-矩阵"><a href="#利用-PLINK-v1-9-软件构建-IBS-矩阵" class="headerlink" title="利用 PLINK v1.9 软件构建 IBS 矩阵"></a>利用 PLINK v1.9 软件构建 IBS 矩阵</h4></li>
+</ul>
+<p><img src="https:////upload-images.jianshu.io/upload_images/13346368-9efaeb59de3c58b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/396/format/webp" alt="img"></p>
+<p>IBS.png</p>
+<ul>
+<li>其中 <ul>
+<li>L：个体间用于计算 IBS 的 SNP 位点总数；</li>
+<li>IBS2：位点上共享 2 个等位基因；</li>
+<li>IBS1：位点上共享 1 个等位基因。</li>
+</ul>
+</li>
+</ul>
+<pre class=" language-undefined"><code class="language-undefined">plink --file mydata --cluster --matrix</code></pre>
+<ul>
+<li><h4 id="利用-PLINK-v1-9-软件构建-IBS-距离矩阵"><a href="#利用-PLINK-v1-9-软件构建-IBS-距离矩阵" class="headerlink" title="利用 PLINK v1.9 软件构建 IBS 距离矩阵"></a>利用 PLINK v1.9 软件构建 IBS 距离矩阵</h4></li>
+</ul>
+<p>  DIBS = 1 - IBS</p>
+<pre class=" language-swift"><code class="language-swift">plink <span class="token operator">--</span>file mydata <span class="token operator">--</span>cluster <span class="token operator">--</span><span class="token builtin">distance</span><span class="token operator">-</span>matrix</code></pre>
+<hr>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><hr>
+<ol>
+<li>Nei, M., Genetic Distance, in Encyclopedia of Genetics, S. Brenner and J.H. Miller, Editors. 2001, Academic Press: New York. p. 828-832. <a href="#fnref1">↩</a></li>
+<li>Worku, A. and Y. Tadesse, A Review on Population Structure, Genetic Diversity Analysis, Genetic Distance between Population and Genetic Singularity in Livestock. Advances in Life Science and Technology, 2017. 54: p. 1-6. <a href="#fnref2">↩</a></li>
+<li>Povysil, G. and S. Hochreiter, Sharing of Very Short IBD Segments between Humans, Neandertals, and Denisovans. bioRxiv, 2014: p. 003988. <a href="#fnref3">↩</a></li>
+</ol>
+<p>作者：PETJO</p>
+<p>链接：<a href="https://www.jianshu.com/p/d555dc28c3c0#fn2" target="_blank" rel="noopener">https://www.jianshu.com/p/d555dc28c3c0#fn2</a></p>
+<p>来源：简书</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<h3 id="1-群体遗传分化的度量"><a href="#1-群体遗传分化的度量" class="headerlink" title="1. 群体遗传分化的度量"></a>1. 群体遗传分化的度量</h3><h4 id="（1）F-统计量"><a href="#（1）F-统计量" class="headerlink" title="（1）F-统计量"></a>（1）F-统计量</h4><p>现实植物自然群体并非是理想群体，如果<strong>仅考虑单基因座上一对等位基因</strong>，对于由若干个地方群体组成的生物大群体，各层次现实群体中基因型频率期望值偏差一般用Fis、Fif、Fst三个参数来度量，统称为<strong>F-统计量</strong>。<br> FIS,是Hi相对于Hs减少量的比值，也就是地方群体平均近交系数。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-1c47f9a75a9eea52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/338/format/webp" alt="img"></p>
+<p>Fst，是Hs相对于Ht减少量的比值，可理解为有亲缘关系地方群体间的平均近交系数。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-5a51b478eac1f34f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/358/format/webp" alt="img"></p>
+<p> Fit，是Hi相对于Ht减少量的比值，也就是整个群体水平近交系数。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-2eb57adebd254b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/362/format/webp" alt="img"></p>
+<p>image.png</p>
+<p> 如果从配子间亲缘关系角度来分析，Fis和Fit分别相当于地方群体和整个群体中任何个体携带的一对等位基因是同源的概率，而Fst是从两个地方群体中任意抽取的两个配子是同源的概率。从两个地方群体中任意抽出的两个配子是同源的概率大，表明两个地方群体遗传组成相似，反之，地方群体间遗传分化程度高，因此，可用Fst度量地方群体间遗传分化。 </p>
+<blockquote>
+<p>Wright（1978）建议，实际研究中Fst为0 ~ 0.05，群体间遗传分化很小，可不考虑群体间遗传分化；Fst为0.05 ~ 0.15，群体间存在中等程度遗传分化；Fst为0.15 ~ 0.25，群体间遗传分化较大；Fst值在0.25以上，群体间有很大遗传分化。</p>
+</blockquote>
+<h4 id="（2）Nei’s-Gst"><a href="#（2）Nei’s-Gst" class="headerlink" title="（2）Nei’s Gst"></a>（2）Nei’s Gst</h4><p>F-统计量是针对一对等位基因提出的，如果基因座上存在复等位基因时，Nei（1973）定义了不用同源配子结合的相关性概念的基因差异分化系数（gene differentiation coefficient，Gst）。基因差异分化系数不必考虑地方群体形成历史、迁移方式、群体中等位基因数目和基因型频率，也不必考虑群体内是否存在选择，只需将整个群体中杂合体频率分解为地方群体间变异和地方群体内变异。所有的固定指数均可以由被调查的群体中杂合体频率观察值和期望值来定义。</p>
+<h4 id="（3）等位基因频率方差"><a href="#（3）等位基因频率方差" class="headerlink" title="（3）等位基因频率方差"></a>（3）等位基因频率方差</h4><h3 id="2-遗传距离"><a href="#2-遗传距离" class="headerlink" title="2.遗传距离"></a>2.遗传距离</h3><p>量化群体间遗传分化程度的另一个参数是遗传距离（genetic distance），它常用群体中等位基因频率的函数来度量。最理想的遗传距离度量方法使遗传距离取值范围为[0,1]。0表示两个个体或群体中所有遗传标记都存在，1表示在两个个体或群体中没有共同的遗传标记。<br> 遗传距离应该是一个进化度量值，与进化趋异（evolutionary divergence）相关。进化上，两组个体分化越大，其遗传距离值就越大。</p>
+<h4 id="（1）-Nei’s-Genetic-Distance"><a href="#（1）-Nei’s-Genetic-Distance" class="headerlink" title="（1） Nei’s Genetic Distance"></a>（1） Nei’s Genetic Distance</h4><p>假定X和Y是生物两个不同地方群体（假定地方群体为理想群体），<em>xi</em>、<em>yi</em>分别表示X群体和Y群体特定座位上第<em>i</em>个等位基因频率，那么：</p>
+<p> 随机从X群体中抽取一对等位基因是同一（identical）的概率为 </p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-0c0ca512bc031255.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/162/format/webp" alt="img"></p>
+<p> 随机从Y群体中抽取一对等位基因是同一的概率为</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-ea269542c57ef6e2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/163/format/webp" alt="img"></p>
+<p> 分别从X和Y群体中各抽取一个等位基因是同一的概率为</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-152094b0f6245e2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/200/format/webp" alt="img"></p>
+<p>如果<em>m</em>为检测到的基因座数，<em>xij</em>、<em>yij</em>分别表示X群体和Y群体中第<em>j</em>个座位上第<em>i</em>个等位基因频率，<em>rj</em>表示第<em>j</em>个座位上等位基因数。<em>Jx</em>、<em>Jy</em>、<em>Jxy</em>分别为上述三种概率的算数平均值，那么</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-eeeca31df2a614e9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/953/format/webp" alt="img"></p>
+<p> 随机从X群体中抽取一对基因组间的不同等位基因的比例为</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-403e7d8a56fe5c9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/160/format/webp" alt="img"></p>
+<p> 随机从Y群体中抽取一对基因组间的不同等位基因的比例为</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-8f1d4bd77fbec893.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/162/format/webp" alt="img"></p>
+<p>分别从X和Y群体中各抽取一个基因组间的不同等位基因的比例为</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-cda3aa8c1bd5a8a4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/182/format/webp" alt="img"></p>
+<p> Nei等证明，</p>
+<p>Dx</p>
+<p>、</p>
+<p>Dy</p>
+<p>分别表示X、Y群体中随机抽取基因组间的密码子差值的最小估计，而</p>
+<p>Dxy</p>
+<p>表示来自X、Y群体的两个基因组间密码子差值的最小估计，于是Nei’s最小遗传距离的计算式为</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-b4473f1310cb7704.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/425/format/webp" alt="img"></p>
+<p> Nei’s最小遗传距离是由群体中等位基因频率直接确定群体间遗传距离，但各D值表示的是不同来源的基因组间不相同等位基因的比例，这种变异是不可加的。</p>
+<p> 为克服这一缺点，将</p>
+<p>Dm</p>
+<p>进行标准化，称为Nei’s标准遗传距离</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-a633b40f77d07b04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/319/format/webp" alt="img"></p>
+<h3 id="2-植物群体间迁移"><a href="#2-植物群体间迁移" class="headerlink" title="2. 植物群体间迁移"></a>2. 植物群体间迁移</h3><p>迁移（migration），是指具有某一地方群体中部分个体或配子，因某种原因传播至另一地方群体，并杂交定居。如果迁入和迁出群体的遗传结构不同，将改变迁入地方群体中等位基因频率，这种影响称为迁移压（migration pressure）。<br> 迁移称为地方群体遗传变异大来源。<br> 遗传漂移和自然选择是群体间差异增加，而迁移的遗传效应正好相反。等位基因横跨群体间障碍而慢慢扩散，造成迁入群体中等位基因频率逐渐改变，增加群体间遗传相似性。这种群体间基因流动，称为<strong>基因流（gene flow）</strong>。<br> 群体间迁移的遗传效应主要取决于群体遗传结构、迁移率、群体分布结构。<br> 植物群体分布结构：</p>
+<p>（1） 陆岛模型 </p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-f0ac5e740695c30b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/477/format/webp" alt="img"></p>
+<p>（2） 岛屿模型</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-e792835d1b327df9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/439/format/webp" alt="img"></p>
+<p>（3） 距离隔离模型</p>
+<h3 id="3-植物基因流"><a href="#3-植物基因流" class="headerlink" title="3. 植物基因流"></a>3. 植物基因流</h3><p>植物基因流，是借助花粉、种子、孢子、营养体等遗传物质携带者的迁移或运动来实现的。其中，种子扩散和花粉传播是植物基因流的最主要方式。植物基因流强弱不仅影响植物群体遗传变异水平和有效群体大小，而且也会造成群体遗传结构的重新分配。<br> 研究植物基因流，很大程度上是度量配子（主要是花粉）和种子在群体内和群体间的迁移方式和机制。<br> 植物基因流是研究植物群体动态和进化的一个中心问题，在植物群体片段化活力分析、转基因植物安全性分析、入侵植物的控制等方面具有重要意义。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/1719634-0d017b994acd747e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/947/format/webp" alt="img"></p>
+<p>作者：WooWoods</p>
+<p>链接：<a href="https://www.jianshu.com/p/91479ebefea7" target="_blank" rel="noopener">https://www.jianshu.com/p/91479ebefea7</a></p>
+<p>来源：简书</p>
+<p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
             </div>
             <hr/>
 
@@ -526,7 +791,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://castel-tao.github.io/2020/06/11/sui-bi/">https://castel-tao.github.io/2020/06/11/sui-bi/</a>
+                    <a href="https://castel-tao.github.io/2020/06/25/qun-ti-jian-yi-chuan-ju-chi/">https://castel-tao.github.io/2020/06/25/qun-ti-jian-yi-chuan-ju-chi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -564,12 +829,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ggplot/">
-                                    <span class="chip bg-color">ggplot</span>
+                                <a href="/tags/genetics/">
+                                    <span class="chip bg-color">genetics</span>
                                 </a>
                             
-                                <a href="/tags/R/">
-                                    <span class="chip bg-color">R</span>
+                                <a href="/tags/population-genetics/">
+                                    <span class="chip bg-color">population genetics</span>
+                                </a>
+                            
+                                <a href="/tags/arithmetic/">
+                                    <span class="chip bg-color">arithmetic</span>
                                 </a>
                             
                         </div>
@@ -740,7 +1009,7 @@
         repo: 'castel-tao.github.io',
         owner: 'castel-tao',
         admin: "castel-tao",
-        id: '2020-06-11T15-21-09',
+        id: '2020-06-25T00-24-48',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -764,29 +1033,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/18/amova-xiang-guan/">
+                <a href="/2020/06/25/qun-ti-jian-yi-chuan-ju-chi/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png" class="responsive-img" alt="AMOVA相关">
+                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200625001554.png" class="responsive-img" alt="群体间遗传距离">
                         
-                        <span class="card-title">AMOVA相关</span>
+                        <span class="card-title">群体间遗传距离</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            名词解释参数方法和非参数方法在一个统计推断问题中，如果总体分布的具体形式已知(最常见的是假定为正态分布)，则我们只需对其中含有的若干个未知参数作出估计或进行某种形式的假设检验，这类推断方法称为参数方法。
-但在许多实际问题中，我们对总体分布的
+                            遗传距离是用来衡量物种之间或同一物种的群体之间的遗传差异（基因组差异）的程度
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -794,6 +1063,23 @@
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/genetics/">
+                        <span class="chip bg-color">genetics</span>
+                    </a>
+                    
+                    <a href="/tags/population-genetics/">
+                        <span class="chip bg-color">population genetics</span>
+                    </a>
+                    
+                    <a href="/tags/arithmetic/">
+                        <span class="chip bg-color">arithmetic</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -805,23 +1091,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/11/tabplot-han-shu/">
+                <a href="/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524121113.png" class="responsive-img" alt="tabplot函数">
                         
-                        <span class="card-title">tabplot函数</span>
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="群体间遗传分化度量值Fst">
+                        
+                        <span class="card-title">群体间遗传分化度量值Fst</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据速览package，可能没用，但是炫酷就够了。
+                            Fst：群体间遗传分化指数，反映群体等位基因杂合性水平，用于衡量种群分化程度。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
                             </span>
                         <span class="publish-author">
                             
@@ -834,16 +1121,16 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ggplot/">
-                        <span class="chip bg-color">ggplot</span>
+                    <a href="/tags/genetics/">
+                        <span class="chip bg-color">genetics</span>
                     </a>
                     
-                    <a href="/tags/R/">
-                        <span class="chip bg-color">R</span>
+                    <a href="/tags/population-genetics/">
+                        <span class="chip bg-color">population genetics</span>
                     </a>
                     
-                    <a href="/tags/data-visualization/">
-                        <span class="chip bg-color">data visualization</span>
+                    <a href="/tags/arithmetic/">
+                        <span class="chip bg-color">arithmetic</span>
                     </a>
                     
                 </div>

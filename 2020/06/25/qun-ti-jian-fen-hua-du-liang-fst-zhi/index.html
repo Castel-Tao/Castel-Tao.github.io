@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="随笔, TaosPlanet">
+    <meta name="keywords" content="群体间遗传分化度量值Fst, TaosPlanet">
     <meta name="description" content="时间最具有腐蚀力，洗尽了铅华，那夺目的荣耀最终都会成为过眼云烟，留不住的风景。--王安忆 《长恨歌》">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>随笔 | TaosPlanet</title>
+    <title>群体间遗传分化度量值Fst | TaosPlanet</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">随笔</h1>
+                    <h1 class="description center-align post-title">群体间遗传分化度量值Fst</h1>
                 </div>
             </div>
         </div>
@@ -445,12 +445,16 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ggplot/">
-                                <span class="chip bg-color">ggplot</span>
+                            <a href="/tags/genetics/">
+                                <span class="chip bg-color">genetics</span>
                             </a>
                         
-                            <a href="/tags/R/">
-                                <span class="chip bg-color">R</span>
+                            <a href="/tags/population-genetics/">
+                                <span class="chip bg-color">population genetics</span>
+                            </a>
+                        
+                            <a href="/tags/arithmetic/">
+                                <span class="chip bg-color">arithmetic</span>
                             </a>
                         
                     </div>
@@ -465,28 +469,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-11
+                    2020-06-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-11
+                    2020-06-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -501,7 +505,172 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="就随便谢谢"><a href="#就随便谢谢" class="headerlink" title="就随便谢谢"></a>就随便谢谢</h2>
+                <h2 id="F-统计量、Fst和Gst"><a href="#F-统计量、Fst和Gst" class="headerlink" title="F-统计量、Fst和Gst"></a>F-统计量、Fst和Gst</h2><p><strong>遗传距离（Genetic distance）</strong>：又称“遗传差异”，指不同种群或物种之间的基因差异程度，并且以某种数值进行度量，通常用Fst值反映<strong>群体</strong>遗传变异的尺度。</p>
+<p><strong>F-统计量</strong>是针对一对等位基因提出的，F统计量主要有（Fis，Fif，Fst）三种。</p>
+<p>如果基因座上存在复等位基因时，Nei（1973）定义了不用同源配子结合的相关性概念的基因差异分化系数（gene differentiation coefficient，Gst）。</p>
+<p><strong>Fst</strong>：群体间遗传分化指数，又称为固定系数。反映群体等位基因杂合性水平，用于衡量种群分化程度。群体遗传学中衡量群体间分化程度的指标有很多种，最常用的就是Fst指数。</p>
+<p>这个值是种群分化和遗传距离的一种度量方法，<strong>分化指数越大，差异越大</strong>。适用于亚群体间多样性的比较。</p>
+<p>Fst是针对一对等位基因，如果基因座上存在复等位基因，则需要用Gst衡量。</p>
+<h2 id="Fst意义"><a href="#Fst意义" class="headerlink" title="Fst意义"></a>Fst意义</h2><p>Fst取值范围[0,1]，最大值为1，表明等位基因在各地方群体中固定，两个群体完全独立；最小值为0，意味着不同地方群体遗传结构完全一致，群体间没有分化，群体间自由interbreeding。</p>
+<p>Wright（1978）建议，</p>
+<p>Fst为0 ~ 0.05，群体间遗传分化很小，可不考虑群体间遗传分化；</p>
+<p>Fst为0.05 ~ 0.15，群体间存在中等程度遗传分化；</p>
+<p>Fst为0.15 ~ 0.25，群体间遗传分化较大；</p>
+<p>Fst值在0.25以上，群体间有很大遗传分化。</p>
+<h2 id="Fst应用"><a href="#Fst应用" class="headerlink" title="Fst应用"></a>Fst应用</h2><p>Fst可用于计算SNP位点在不同群体中的分化程度（或固定程度），野生种亚群和栽培种亚群间的Fst可反映维位点受人工选择程度。是一种以<strong>哈温平衡为前提</strong>的种群遗传学统计方法。</p>
+<p>计算步骤如下：</p>
+<ol>
+<li><p>测定群体数目及群体规模</p>
+</li>
+<li><p>分别计算群体及亚群体中某一位点上的等位基因频率和基因型频率</p>
+</li>
+<li><p>计算种群期望杂合度（H<del>T</del>）和亚群预计杂合度（H<del>S</del>）</p>
+</li>
+<li><p>计算Fst</p>
+</li>
+</ol>
+<h2 id="Fst的计算"><a href="#Fst的计算" class="headerlink" title="Fst的计算"></a>Fst的计算</h2><h3 id="杂合度的概念"><a href="#杂合度的概念" class="headerlink" title="杂合度的概念"></a>杂合度的概念</h3><p>要清晰明白上述过程，首先要理解杂合度这个概念：</p>
+<p>设某群体中一对等位基因，a=0.5，A=0.5，Aa杂合度=0.5，最大；</p>
+<p>若另一个群体中，a=0.4，A=0.6，则Aa杂合度=2 x 0.4 x 0.6 = 0.48，稍小了一些；</p>
+<p>第三个群体，a=0.2，A=0.8，则Aa杂合度=2 x 0.2 x 0.8 = 0.32，更小。</p>
+<p>由上可见，杂合度越小，种群越纯净；杂合度高，种群越不纯净。</p>
+<h3 id="F-统计量计算公式"><a href="#F-统计量计算公式" class="headerlink" title="F-统计量计算公式"></a>F-统计量计算公式</h3><p>Fit：种群的总近交系数</p>
+<p>Fst：群体内基因分化系数</p>
+<p>Fis：种群内近交系数， FIS，是HI相对于HS减少量的比值，即地方群体的平均近交系数。</p>
+<p>Hi：整个总体所观察到的杂合体频率平均值。（把所有亚群体当作一个总的整体来看的时候）</p>
+<p>Hs：几个亚群体的期望杂合度的平均值。</p>
+<p>Ht：把所有亚群体当作一个总的整体来看的时候，这个总群体中的期望杂合度。且这个总的群体满足HW平衡(He).</p>
+<p>Fis = (Hs - Hi)/Hs = 1-(Hi/Hs) ; FIS，是HI相对于HS减少量的比值，即地方群体的平均近交系数。</p>
+<p>Fst = (Ht - Hs)/Ht = 1-(Hs/Ht) ; FST，是HS相对于HT减少量的比值，即有亲缘关系地方群体间的平均近交系数。</p>
+<p>Fit = (Ht - Hi)/Ht = 1-(Hi/Ht) ; FIT，是HI相对于HT减少量的比值，即整个群体的平均近交系数。</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><p>理论上要估算FST，需要以下步骤：</p>
+<ul>
+<li>找出每个亚群的等位基因频率。</li>
+<li>查找复合群体的平均等位基因频率</li>
+<li>计算每个亚群的杂合度（2pq）</li>
+<li>计算这些亚群杂合度的平均值，这是HS。</li>
+<li>根据总体等位基因频率计算杂合度，这是HT。</li>
+<li>最后，计算FST =（HT-HS）/ HT</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200621123429.png" alt=""></p>
+<p>在得到每个群体中等位基因的频率后:</p>
+<p>首先第一步是计算每个亚群的杂合度H，这一步简单H=2<em>p</em>q （p和q是对应群体中等位基因的频率）</p>
+<p>第二步计算这些亚群杂合度的平均值HS，取三个不同种群中的H值，除去平均数3，得到结果</p>
+<p>第三步，计算群体等位基因频率，和上述方法类似，取每个等位基因在对应种群中的频率叠加除去平均数。</p>
+<p>第四步，计算所有群体中的杂合度HT，使用2pq，p和q是群体中的等位基因频率，在第三步骤已经算好了。</p>
+<p>最后，根据计算公式算出Fst。</p>
+<p>在实际中，当然不可能用手工对每个位点进行这样的计算，怎样在电脑中分析FST等值？</p>
+<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><p>当然了，实际中我们并不需要像上述例子那样逐个计算。等位基因频率的信息都藏在snp calling后的vcf中，再使用恰当的工具就可以快速计算出Fst。下面给大家介绍一种比较popular的计算Fst的方法（还有其他方法不限于一种），使用vcftools：</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">##对每一个SNP变异位点进行计算</span>
+
+vcftools --vcf test.vcf --weir-fst-pop 1_population.txt --weir-fst-pop 2_population.txt  --out p_1_2—single
+
+<span class="token comment" spellcheck="true">##按照区域来计算</span>
+vcftools --vcf test.vcf --weir-fst-pop 1_population.txt --weir-fst-pop 2_population.txt  --out p_1_2_bin --fst-window-size 500000 --fst-window-step 50000
+
+<span class="token comment" spellcheck="true"># test.vcf是SNP calling 过滤后生成的vcf 文件；</span>
+<span class="token comment" spellcheck="true"># p_1_2_3 生成结果的prefix</span>
+<span class="token comment" spellcheck="true"># 1_population.txt是一个文件包含同一个群体中所有个体，一般每行一个个体。个体名字要和vcf的名字对应。</span>
+<span class="token comment" spellcheck="true"># 2_population.txt 包含了群体二中所有个体。</span>
+<span class="token comment" spellcheck="true">#计算的窗口是500kb，而步长是50kb （根据你的需其可以作出调整）。我们也可以只计算每个点的Fst，去掉参数（--fst-window-size 500000 --fst-window-step 50000）即可。</span>
+</code></pre>
+<p>分别对不同结果进行图形绘制</p>
+<pre class=" language-R"><code class="language-R">##图1
+library(ggplot2)
+data<-read.table("test1.out.windowed.weir.fst",header=T)
+sc3 = subset(data,CHROM=="Gm01")
+p <- ggplot(sc3,aes(x=BIN_END/1000000,y=WEIGHTED_FST)) + geom_point(size=0.5, colour="blue") + xlab("Physical distance (Mb)")+ ylab("Fst") + ylim(-1,1)
+p + theme_bw()
+
+##图2
+library(ggplot2)
+data<-read.table("test.out.weir.fst",header=T)
+sc3 = subset(data,CHROM=="Gm01")
+p <- ggplot(sc3,aes(x=POS,y=WEIR_AND_COCKERHAM_FST)) + geom_point(size=0.5, colour="blue") + xlab("Physical distance (Mb)")+ ylab("Fst") + ylim(-1,1)
+p + theme_bw()</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200625000105.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200625000111.png" alt=""></p>
+<p>可以看到两幅图还是基本对应的，然后对一些接近1，与大部分点偏离比较高的点可以将其与功能注释相结合，还有一些选择压力分析的工具相结合，寻找出其对应的基因，观察该基因是否是被选择。Pi也是选择分析中一个很要的参数，这一部分内容有时间这一点以后再补回来。</p>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>AA</th>
+<th>Aa</th>
+<th>aa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>种群1</td>
+<td>125</td>
+<td>250</td>
+<td>125</td>
+</tr>
+<tr>
+<td>种群2</td>
+<td>50</td>
+<td>30</td>
+<td>20</td>
+</tr>
+<tr>
+<td>种群3</td>
+<td>100</td>
+<td>500</td>
+<td>400</td>
+</tr>
+</tbody></table>
+<p>表格表示为三个种群中一个等位基因的存在情况。</p>
+<p>第一步，计算种群大小：</p>
+<p>种群1: 500</p>
+<p>种群2: 100</p>
+<p>种群3: 1000</p>
+<p>第二步，计算等位基因的频率：</p>
+<p>p1=(125*2+250)/1000=0.5</p>
+<p>q1=1-p1=0.5</p>
+<p>p2=(50*2+30)/200=0.65</p>
+<p>q2=1-p2=0.35</p>
+<p>p3=(100*2+500)/200=0.35</p>
+<p>q3=1-p3=0.65</p>
+<p>第三步，计算哈温平衡下预期基因型：</p>
+<p>种群1: E(AA)=500<em>0.5</em>0.5=125(与实际相等)</p>
+<p>E(Aa)=500<em>0.5</em>0.5*2=250(与实际相等)</p>
+<p>E(aa)=500<em>0.5</em>0.5=125(与实际相等)</p>
+<p>种群2： E(AA)=100<em>0.65</em>0.65=42.25(比实际小7.75)</p>
+<p>E(Aa)=100<em>0.65</em>0.35*2=45.5(比实际多15.5)</p>
+<p>E(aa)=100<em>0.35</em>0.35=12.25(比实际小7.75)</p>
+<p>种群3: E(AA)=1000<em>0.35</em>0.35=122.5(比实际多22.5)</p>
+<p>E(Aa)=1000<em>0.35</em>0.65*2=455(比实际小45)</p>
+<p>E(aa)=1000<em>0.65</em>0.65=422.5(比实际多22.5)</p>
+<p>种群1的 预期=实际，完美适合；</p>
+<p>种群2的 预期比实际少15.5个纯合子，也可以理解为实际比预期多15.5个纯合子，可能是近交导致；</p>
+<p>种群3的 预期比实际多45个纯合子，也可以理解为实际和预期相比有45个纯合子缺失，可能是远交或Wahlund效应导致。</p>
+<p>第四步，计算每个亚群实际观察到的杂合度：</p>
+<p>种群1: 250/500=0.5</p>
+<p>种群2: 30/100=0.3</p>
+<p>种群3: 500/1000=0.5</p>
+<p>第五步，计算每个亚群预期的杂合度：</p>
+<p>第六步，计算每个亚群的近交系数：</p>
+<p>F1=(0.5-0.5)/0.5=0 不近交，不远交</p>
+<p>F2=(0.455-0.3)/0.455=0.341 存在近交情况，实际杂合子比预期的少</p>
+<p>F3=(0.455-0.5)/0.455=-0.099 存在远交情况，实际杂合子比预期的多</p>
+<p>第七步，计算在整个种群中等位基因A的频率：</p>
+<p>第八步，计算在整个种群中等位基因a的频率：</p>
+<p>第九步，计算三种杂合性指数：</p>
+<p>HI(实际杂合度)</p>
+<p>HS(亚群预计杂合度–通过每个亚群预计杂合度(亚群等位基因频率)来计算)</p>
+<p>HT(种群预计杂合度–通过种群中预计等位基因频率来计算)</p>
+<p>第十步，计算:</p>
+<p>最后留两个思考题：</p>
+<p>1，FIS 和 FIT 的如何理解？</p>
+<p>2，FST一定为正么？</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.voidcn.com/article/p-mdkdczqg-bpz.html" target="_blank" rel="noopener">http://www.voidcn.com/article/p-mdkdczqg-bpz.html</a></p>
+<p><a href="https://wenku.baidu.com/view/b19155ef70fe910ef12d2af90242a8956aecaa36.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/b19155ef70fe910ef12d2af90242a8956aecaa36.html</a></p>
+<p><a href="https://www.jianshu.com/p/b73a8d6233be" target="_blank" rel="noopener">https://www.jianshu.com/p/b73a8d6233be</a></p>
+<p><a href="https://www.plob.org/article/21678.html" target="_blank" rel="noopener">https://www.plob.org/article/21678.html</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/44307625" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/44307625</a></p>
+<p><a href="http://www.360doc.com/content/18/0221/13/19913717_731200680.shtml" target="_blank" rel="noopener">http://www.360doc.com/content/18/0221/13/19913717_731200680.shtml</a></p>
+<p><a href="http://blog.sina.com.cn/s/blog_4ab0b3390102viol.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_4ab0b3390102viol.html</a></p>
+
             </div>
             <hr/>
 
@@ -526,7 +695,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://castel-tao.github.io/2020/06/11/sui-bi/">https://castel-tao.github.io/2020/06/11/sui-bi/</a>
+                    <a href="https://castel-tao.github.io/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/">https://castel-tao.github.io/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -564,12 +733,16 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ggplot/">
-                                    <span class="chip bg-color">ggplot</span>
+                                <a href="/tags/genetics/">
+                                    <span class="chip bg-color">genetics</span>
                                 </a>
                             
-                                <a href="/tags/R/">
-                                    <span class="chip bg-color">R</span>
+                                <a href="/tags/population-genetics/">
+                                    <span class="chip bg-color">population genetics</span>
+                                </a>
+                            
+                                <a href="/tags/arithmetic/">
+                                    <span class="chip bg-color">arithmetic</span>
                                 </a>
                             
                         </div>
@@ -740,7 +913,7 @@
         repo: 'castel-tao.github.io',
         owner: 'castel-tao',
         admin: "castel-tao",
-        id: '2020-06-11T15-21-09',
+        id: '2020-06-25T00-17-58',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -768,6 +941,58 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/06/25/qun-ti-jian-yi-chuan-ju-chi/">
+                    <div class="card-image">
+                        
+                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200625001554.png" class="responsive-img" alt="群体间遗传距离">
+                        
+                        <span class="card-title">群体间遗传距离</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            遗传距离是用来衡量物种之间或同一物种的群体之间的遗传差异（基因组差异）的程度
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Castel-Tao
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/genetics/">
+                        <span class="chip bg-color">genetics</span>
+                    </a>
+                    
+                    <a href="/tags/population-genetics/">
+                        <span class="chip bg-color">population genetics</span>
+                    </a>
+                    
+                    <a href="/tags/arithmetic/">
+                        <span class="chip bg-color">arithmetic</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/06/18/amova-xiang-guan/">
                     <div class="card-image">
                         
@@ -784,44 +1009,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Castel-Tao
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/11/tabplot-han-shu/">
-                    <div class="card-image">
-                        
-                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524121113.png" class="responsive-img" alt="tabplot函数">
-                        
-                        <span class="card-title">tabplot函数</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            数据速览package，可能没用，但是炫酷就够了。
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
                             </span>
                         <span class="publish-author">
                             
@@ -830,22 +1019,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/ggplot/">
-                        <span class="chip bg-color">ggplot</span>
-                    </a>
-                    
-                    <a href="/tags/R/">
-                        <span class="chip bg-color">R</span>
-                    </a>
-                    
-                    <a href="/tags/data-visualization/">
-                        <span class="chip bg-color">data visualization</span>
-                    </a>
-                    
                 </div>
                 
             </div>

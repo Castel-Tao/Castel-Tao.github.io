@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://castel-tao.github.io/"/>
-  <updated>2020-06-24T16:26:27.460Z</updated>
+  <updated>2020-06-25T12:43:32.682Z</updated>
   <id>https://castel-tao.github.io/</id>
   
   <author>
@@ -17,40 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>群体间遗传距离</title>
-    <link href="https://castel-tao.github.io/2020/06/25/qun-ti-jian-yi-chuan-ju-chi/"/>
-    <id>https://castel-tao.github.io/2020/06/25/qun-ti-jian-yi-chuan-ju-chi/</id>
-    <published>2020-06-24T16:24:48.985Z</published>
-    <updated>2020-06-24T16:26:27.460Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;01-Definition&quot;&gt;&lt;a href=&quot;#01-Definition&quot; class=&quot;headerlink&quot; title=&quot;01-Definition&quot;&gt;&lt;/a&gt;&lt;strong&gt;01-Definition&lt;/strong&gt;&lt;/h3&gt;&lt;h4
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="genetics" scheme="https://castel-tao.github.io/tags/genetics/"/>
-    
-      <category term="population genetics" scheme="https://castel-tao.github.io/tags/population-genetics/"/>
-    
-      <category term="arithmetic" scheme="https://castel-tao.github.io/tags/arithmetic/"/>
-    
-  </entry>
-  
-  <entry>
     <title>群体间遗传分化度量值Fst</title>
     <link href="https://castel-tao.github.io/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/"/>
     <id>https://castel-tao.github.io/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/</id>
     <published>2020-06-24T16:17:58.784Z</published>
-    <updated>2020-06-24T16:28:39.736Z</updated>
+    <updated>2020-06-25T12:43:32.682Z</updated>
     
     <summary type="html">
     
@@ -75,61 +46,11 @@
   </entry>
   
   <entry>
-    <title>AMOVA相关</title>
-    <link href="https://castel-tao.github.io/2020/06/18/amova-xiang-guan/"/>
-    <id>https://castel-tao.github.io/2020/06/18/amova-xiang-guan/</id>
-    <published>2020-06-18T15:12:02.833Z</published>
-    <updated>2020-06-23T17:10:30.206Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;名词解释&quot;&gt;&lt;a href=&quot;#名词解释&quot; class=&quot;headerlink&quot; title=&quot;名词解释&quot;&gt;&lt;/a&gt;名词解释&lt;/h2&gt;&lt;h4 id=&quot;参数方法和非参数方法&quot;&gt;&lt;a href=&quot;#参数方法和非参数方法&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>随笔</title>
-    <link href="https://castel-tao.github.io/2020/06/11/sui-bi/"/>
-    <id>https://castel-tao.github.io/2020/06/11/sui-bi/</id>
-    <published>2020-06-11T07:21:09.171Z</published>
-    <updated>2020-06-11T07:21:58.920Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;就随便谢谢&quot;&gt;&lt;a href=&quot;#就随便谢谢&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="ggplot" scheme="https://castel-tao.github.io/tags/ggplot/"/>
-    
-      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
-    
-  </entry>
-  
-  <entry>
     <title>tabplot函数</title>
     <link href="https://castel-tao.github.io/2020/06/11/tabplot-han-shu/"/>
     <id>https://castel-tao.github.io/2020/06/11/tabplot-han-shu/</id>
     <published>2020-06-11T07:03:17.544Z</published>
-    <updated>2020-06-11T07:30:34.585Z</updated>
+    <updated>2020-06-25T12:54:39.654Z</updated>
     
     <summary type="html">
     
@@ -162,7 +83,7 @@ diamonds %&gt;%
     <link href="https://castel-tao.github.io/2020/06/11/apply-zu-han-shu/"/>
     <id>https://castel-tao.github.io/2020/06/11/apply-zu-han-shu/</id>
     <published>2020-06-11T07:00:14.583Z</published>
-    <updated>2020-06-11T13:26:00.826Z</updated>
+    <updated>2020-06-25T12:56:49.236Z</updated>
     
     <summary type="html">
     
@@ -209,29 +130,6 @@ diamonds %&gt;%
       <category term="ggplot" scheme="https://castel-tao.github.io/tags/ggplot/"/>
     
       <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://castel-tao.github.io/2020/06/10/hello-world/"/>
-    <id>https://castel-tao.github.io/2020/06/10/hello-world/</id>
-    <published>2020-06-10T05:50:50.732Z</published>
-    <updated>2020-06-10T05:50:50.732Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   

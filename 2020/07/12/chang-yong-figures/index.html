@@ -465,21 +465,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-10
+                    2020-07-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-11
+                    2020-07-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    216
+                    213
                 </div>
                 
 
@@ -502,8 +502,9 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1441226072&auto=1&height=66"></iframe>
+## How to output ? 
 
-<h2 id="How-to-output"><a href="#How-to-output" class="headerlink" title="How to output ?"></a>How to output ?</h2><pre class=" language-R"><code class="language-R"># 第一种
+<pre class=" language-R"><code class="language-R"># 第一种
 png("./Figures/cor.all.png",width = 1350,height = 1350,units = "px")
 pn
 dev.off()
@@ -534,6 +535,24 @@ graph2png(file=filen, fun=plot.fun, dpi=400, height = 5, aspectr=4)</code></pre>
                 ) +
           labs(x = "Projects", y = "Median Correlation of Log2 Intensity \n MCLI", 
                fill = "Sample")</code></pre>
+<h3 id="HLQ-Barplot"><a href="#HLQ-Barplot" class="headerlink" title="HLQ Barplot"></a>HLQ Barplot</h3><pre class=" language-R"><code class="language-R">labels <- c("**", "**", "**", " ", "***", "**", "***"," ")
+pn <- ggplot()+
+  geom_bar(data=ggdata,aes(x=X2,y=mean,fill=variable),stat = "identity",position="dodge",width = .7) +
+  geom_errorbar(data=ggdata,aes(x=X2,fill=variable,ymin=mean-sd,ymax=mean+sd), 
+                width=.2,size=1,position = position_dodge(width = 0.7)) +
+  theme_classic() +
+
+  geom_text(data=ggdata,aes(x=X2,y=mean+sd+1.8, group = variable),label=labels ,
+            position = position_dodge(0.7), size = 5, fontface = "bold")+
+  theme(axis.title = element_text(size=20),
+        axis.text = element_text(size =20))
+
+library(ggtech)
+library(ggthemes)
+pn + 
+scale_fill_tech(theme="airbnb")</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200714210148.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200714210142.png" alt=""></p>
 <h2 id="Radar-plot"><a href="#Radar-plot" class="headerlink" title="Radar plot"></a>Radar plot</h2><pre class=" language-R"><code class="language-R">#Radar function
 coord_radar <- function (theta = "x", start = 0, direction = 1) 
 {  theta <- match.arg(theta, c("x", "y"))
@@ -687,27 +706,32 @@ ggplot(aes(x = variable,y=value,fill=Percentile,color=Date)) +
         legend.text = element_text(size=20), #图例文字
         legend.title = element_text(size=25,hjust = 0.5))</code></pre>
 <p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524141303.png" alt=""></p>
-<h2 id="Scatter-plot"><a href="#Scatter-plot" class="headerlink" title="Scatter plot"></a>Scatter plot</h2><p>相关性矩阵图</p>
-<pre class=" language-R"><code class="language-R">HEHE2 %>%
- pheatmap(show_rownames = T,
-           show_colnames = T,
-          cluster_rows = F,
-          cluster_cols = F,
-           display_numbers = TRUE,  #是否显示格子数值
-           number_color = "grey29",  #格子数值颜色
-           cutree_rows = 1,
-           cutree_cols = 1,
-           cellwidth = 45, cellheight = 45, 
-          #annotation_col = col_anno,
-           #annotation_colors = ann_colors,
-          #annotation_row = col_anno,
-           border_color = F,   #调整格子边缘
-           main = paste0("Correlation Matrix of all Sample"),      #标题
-           fontsize=15                   #标题size
-           )</code></pre>
-<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144202.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144533.png" alt=""></p>
-<h2 id="Paired-Scatter-Plot"><a href="#Paired-Scatter-Plot" class="headerlink" title="Paired Scatter Plot"></a>Paired Scatter Plot</h2><pre class=" language-R"><code class="language-R">library(GGally)
+<h2 id="Scatter-plot"><a href="#Scatter-plot" class="headerlink" title="Scatter plot"></a>Scatter plot</h2><h3 id="LY蜂巢散点图"><a href="#LY蜂巢散点图" class="headerlink" title="LY蜂巢散点图"></a>LY蜂巢散点图</h3><p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200714211511.png" alt=""></p>
+<pre class=" language-R"><code class="language-R">library(ggbeeswarm) 
+pn <- ggdata %>% 
+    ggplot(aes(x=N.or.T,y=value,fill=N.or.T,color=N.or.T)) +
+    geom_beeswarm(shape=21,size=4,cex=1.5,color="black") +  #cex鍐冲畾鏁ｇ偣寮犲紑鐨勭▼搴?
+    geom_errorbar(aes(ymin=mean-sd, ymax=mean+sd),
+                  color="black",width=0.3,size=1,linetype="dashed") +
+    geom_errorbar(aes(ymax=mean,ymin=mean),size=1,color="black") +  #娣诲姞涓棿鍧囧€肩嚎
+    scale_color_manual(values = c("#0072B5FF","#BC3C29FF")) +
+    scale_fill_manual(values = c("#00BFC4","#F8766D")) +
+    theme_classic() +
+    xlab("")+
+    ylab("Expression of PARP16 \n FPKM") +
+    theme(
+        axis.line=element_line(colour="black",size=0.25),
+        axis.title=element_text(size=13,face="plain",color="black"),
+        axis.text = element_text(size=15,face="plain",color="black"),
+        legend.position="none"
+  )
+
+library(ggpubr)
+mycomparision <- list(c('Primary Tumor','Normal'))  
+pn + stat_compare_means(method = 't.test', comparisons = mycomparision, label = 'p.signif') 
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200714211557.png" alt=""></p>
+<h3 id="Paired-Scatter-Plot"><a href="#Paired-Scatter-Plot" class="headerlink" title="Paired Scatter Plot"></a>Paired Scatter Plot</h3><pre class=" language-R"><code class="language-R">library(GGally)
 panel.points <- function(data, mapping){
   ggplot(data = data, mapping = mapping) +
     geom_point(alpha=0.4,size=1.3,color='#177cb0')+ #3C5488FF
@@ -734,6 +758,25 @@ pn <- ggpairs(tmp2[7:ncol(tmp2)],mapping = ggplot2::aes(),
 
         panel.border = element_rect(colour = "black", fill = NA))</code></pre>
 <p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144046.png" alt=""></p>
+<h2 id="相关性矩阵-热图"><a href="#相关性矩阵-热图" class="headerlink" title="相关性矩阵-热图"></a>相关性矩阵-热图</h2><pre class=" language-R"><code class="language-R">HEHE2 %>%
+ pheatmap(show_rownames = T,
+           show_colnames = T,
+          cluster_rows = F,
+          cluster_cols = F,
+           display_numbers = TRUE,  #是否显示格子数值
+           number_color = "grey29",  #格子数值颜色
+           cutree_rows = 1,
+           cutree_cols = 1,
+           cellwidth = 45, cellheight = 45, 
+          #annotation_col = col_anno,
+           #annotation_colors = ann_colors,
+          #annotation_row = col_anno,
+           border_color = F,   #调整格子边缘
+           main = paste0("Correlation Matrix of all Sample"),      #标题
+           fontsize=15                   #标题size
+           )</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144202.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144533.png" alt=""></p>
 <h2 id="Density-plot"><a href="#Density-plot" class="headerlink" title="Density plot"></a>Density plot</h2><pre class=" language-R"><code class="language-R">tmptmp %>% 
     ggplot(aes(x=value,fill=Sample_library,color=Sample_library)) +
        geom_density(alpha=0.3,size=1.2) +
@@ -823,7 +866,7 @@ hc <- hclust(dist(t(as.matrix(center))),"average")
 plot(hc,axes = F)
 </code></pre>
 <p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144116.png" alt=""></p>
-<h2 id="火山图"><a href="#火山图" class="headerlink" title="火山图"></a>火山图</h2><pre class=" language-R"><code class="language-R"># 设置pvalue和logFC的阈值
+<h2 id="火山图"><a href="#火山图" class="headerlink" title="火山图"></a>火山图</h2><h3 id="火山图1"><a href="#火山图1" class="headerlink" title="火山图1"></a>火山图1</h3><pre class=" language-R"><code class="language-R"># 设置pvalue和logFC的阈值
 cut_off_pvalue = 0.05
 cut_off_logFC = 1
 # 根据阈值分别为上调基因设置‘up’，下调基因设置‘Down’，无差异设置‘Stable’，保存到change列
@@ -839,7 +882,7 @@ data %>% ggplot(aes(x= log2.fc. ,y=-log10(qvalue),color = change)) +
   theme_classic() + 
   scale_color_manual(values=c("#546de5", "#d2dae2","#ff4757"))</code></pre>
 <p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144832.png" alt=""></p>
-<h2 id="火山图2"><a href="#火山图2" class="headerlink" title="火山图2"></a>火山图2</h2><pre class=" language-R"><code class="language-R">data <- read.csv( "C:../asset/wuli.csv")
+<h3 id="火山图2"><a href="#火山图2" class="headerlink" title="火山图2"></a>火山图2</h3><pre class=" language-R"><code class="language-R">data <- read.csv( "C:../asset/wuli.csv")
 data$Abundance <- (data$Y179.30 + data$Y179.40)/1000
 
 # 设置pvalue和logFC的阈值
@@ -897,7 +940,7 @@ pn + geom_text_repel(data = data, aes(x = data$log2.fc.,
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://castel-tao.github.io/2020/06/10/chang-yong-figures/">https://castel-tao.github.io/2020/06/10/chang-yong-figures/</a>
+                    <a href="https://castel-tao.github.io/2020/07/12/chang-yong-figures/">https://castel-tao.github.io/2020/07/12/chang-yong-figures/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1111,7 +1154,7 @@ pn + geom_text_repel(data = data, aes(x = data$log2.fc.,
         repo: 'castel-tao.github.io',
         owner: 'castel-tao',
         admin: "castel-tao",
-        id: '2020-06-10T14-38-27',
+        id: '2020-07-12T14-40-51',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1139,23 +1182,23 @@ pn + geom_text_repel(data = data, aes(x = data$log2.fc.,
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/06/11/apply-zu-han-shu/">
+                <a href="/2020/07/14/anova-fang-chai-fen-xi/">
                     <div class="card-image">
                         
-                        <img src="/../source/medias/featureimages/20.jpg" class="responsive-img" alt="apply族函数">
+                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200713101744.jpg" class="responsive-img" alt="ANOVA方差分析">
                         
-                        <span class="card-title">apply族函数</span>
+                        <span class="card-title">ANOVA方差分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            apply函数家族，自己整理了下
+                            方差分析！方差分析！
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-11
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-14
                         </span>
                         <span class="publish-author">
                             
@@ -1172,8 +1215,8 @@ pn + geom_text_repel(data = data, aes(x = data$log2.fc.,
                         <span class="chip bg-color">R</span>
                     </a>
                     
-                    <a href="/tags/data-cleaning/">
-                        <span class="chip bg-color">data cleaning</span>
+                    <a href="/tags/statistics/">
+                        <span class="chip bg-color">statistics</span>
                     </a>
                     
                 </div>
@@ -1184,45 +1227,49 @@ pn + geom_text_repel(data = data, aes(x = data$log2.fc.,
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/06/10/chang-yong-figures/">
+                <a href="/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/">
                     <div class="card-image">
                         
-                        <img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144111.png" class="responsive-img" alt="常用Figures">
                         
-                        <span class="card-title">常用Figures</span>
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="群体间遗传分化度量值Fst">
+                        
+                        <span class="card-title">群体间遗传分化度量值Fst</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用图表的R代码，不定期更新中...
+                            Fst：群体间遗传分化指数，反映群体等位基因杂合性水平，用于衡量种群分化程度。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Castel Tao
+                            Castel-Tao
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/ggplot/">
-                        <span class="chip bg-color">ggplot</span>
+                    <a href="/tags/genetics/">
+                        <span class="chip bg-color">genetics</span>
                     </a>
                     
-                    <a href="/tags/R/">
-                        <span class="chip bg-color">R</span>
+                    <a href="/tags/population-genetics/">
+                        <span class="chip bg-color">population genetics</span>
+                    </a>
+                    
+                    <a href="/tags/arithmetic/">
+                        <span class="chip bg-color">arithmetic</span>
                     </a>
                     
                 </div>
@@ -1406,7 +1453,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             &copy; 2017-2020 Castel Tao. 版权所有
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">4.5k</span>
+            <span class="white-color">4.8k</span>
             
 
             <br>

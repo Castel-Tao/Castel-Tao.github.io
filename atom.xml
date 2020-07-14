@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://castel-tao.github.io/"/>
-  <updated>2020-07-14T03:31:25.586Z</updated>
+  <updated>2020-07-14T12:18:03.042Z</updated>
   <id>https://castel-tao.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>定义AMOVA</title>
+    <link href="https://castel-tao.github.io/2020/07/14/ding-yi-amova/"/>
+    <id>https://castel-tao.github.io/2020/07/14/ding-yi-amova/</id>
+    <published>2020-07-14T12:18:02.920Z</published>
+    <updated>2020-07-14T12:18:03.042Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;分子方差分析是传统方差分析的非参数模拟。
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>ANOVA方差分析</title>
     <link href="https://castel-tao.github.io/2020/07/14/anova-fang-chai-fen-xi/"/>
     <id>https://castel-tao.github.io/2020/07/14/anova-fang-chai-fen-xi/</id>
     <published>2020-07-14T03:22:42.282Z</published>
-    <updated>2020-07-14T03:31:25.586Z</updated>
+    <updated>2020-07-14T03:45:23.211Z</updated>
     
     <summary type="html">
     
@@ -40,6 +63,33 @@
       <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
     
       <category term="statistics" scheme="https://castel-tao.github.io/tags/statistics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用Figures</title>
+    <link href="https://castel-tao.github.io/2020/07/12/chang-yong-figures/"/>
+    <id>https://castel-tao.github.io/2020/07/12/chang-yong-figures/</id>
+    <published>2020-07-12T06:40:51.788Z</published>
+    <updated>2020-07-14T13:16:56.925Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="ggplot" scheme="https://castel-tao.github.io/tags/ggplot/"/>
+    
+      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
     
   </entry>
   
@@ -130,33 +180,6 @@ diamonds %&gt;%
       <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
     
       <category term="data cleaning" scheme="https://castel-tao.github.io/tags/data-cleaning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用Figures</title>
-    <link href="https://castel-tao.github.io/2020/06/10/chang-yong-figures/"/>
-    <id>https://castel-tao.github.io/2020/06/10/chang-yong-figures/</id>
-    <published>2020-06-10T06:38:27.315Z</published>
-    <updated>2020-06-11T07:26:37.437Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="ggplot" scheme="https://castel-tao.github.io/tags/ggplot/"/>
-    
-      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
     
   </entry>
   

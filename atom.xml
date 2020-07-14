@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://castel-tao.github.io/"/>
-  <updated>2020-07-05T07:57:26.209Z</updated>
+  <updated>2020-07-14T03:31:25.586Z</updated>
   <id>https://castel-tao.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ANOVA方差分析</title>
+    <link href="https://castel-tao.github.io/2020/07/14/anova-fang-chai-fen-xi/"/>
+    <id>https://castel-tao.github.io/2020/07/14/anova-fang-chai-fen-xi/</id>
+    <published>2020-07-14T03:22:42.282Z</published>
+    <updated>2020-07-14T03:31:25.586Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;吐槽&quot;&gt;&lt;a href=&quot;#吐槽&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
+    
+      <category term="statistics" scheme="https://castel-tao.github.io/tags/statistics/"/>
+    
+  </entry>
   
   <entry>
     <title>群体间遗传分化度量值Fst</title>

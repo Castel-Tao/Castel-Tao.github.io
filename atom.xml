@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://castel-tao.github.io/"/>
-  <updated>2020-07-14T12:18:03.042Z</updated>
+  <updated>2020-07-15T03:59:16.161Z</updated>
   <id>https://castel-tao.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://castel-tao.github.io/2020/07/14/ding-yi-amova/"/>
     <id>https://castel-tao.github.io/2020/07/14/ding-yi-amova/</id>
     <published>2020-07-14T12:18:02.920Z</published>
-    <updated>2020-07-14T12:18:03.042Z</updated>
+    <updated>2020-07-15T03:59:16.161Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;h2 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h2&gt;&lt;p&gt;分子方差分析是传统方差分析的非参数模拟。
+          &lt;hr&gt;
+&lt;p&gt;title: 定义AMOVA&lt;br&gt;author: Castel-Tao&lt;br&gt;top: true&lt;br&gt;published: false&lt;br&gt;cover: false&lt;br&gt;coverImg:
         
       
     
@@ -67,11 +68,39 @@
   </entry>
   
   <entry>
+    <title>apply族函数</title>
+    <link href="https://castel-tao.github.io/2020/07/12/apply-zu-han-shu/"/>
+    <id>https://castel-tao.github.io/2020/07/12/apply-zu-han-shu/</id>
+    <published>2020-07-12T06:40:52.087Z</published>
+    <updated>2020-07-15T03:57:25.371Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;其实也没必要记住这么多，不会用了查就行**&lt;/p&gt;
+&lt;p&gt;lapply&lt;br&gt;|&lt;br&gt;|-&amp;gt; 简化版: sapply&lt;br&gt;| | -&amp;gt; 可设置返回值模板: vapply&lt;br&gt;| |-&amp;gt; 多变量版: mapply&lt;br&gt;|&lt;br&gt;|-&amp;gt;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
+    
+      <category term="data cleaning" scheme="https://castel-tao.github.io/tags/data-cleaning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>常用Figures</title>
     <link href="https://castel-tao.github.io/2020/07/12/chang-yong-figures/"/>
     <id>https://castel-tao.github.io/2020/07/12/chang-yong-figures/</id>
     <published>2020-07-12T06:40:51.788Z</published>
-    <updated>2020-07-14T13:31:21.911Z</updated>
+    <updated>2020-07-15T03:58:30.398Z</updated>
     
     <summary type="html">
     
@@ -95,10 +124,10 @@
   
   <entry>
     <title>群体间遗传分化度量值Fst</title>
-    <link href="https://castel-tao.github.io/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/"/>
-    <id>https://castel-tao.github.io/2020/06/25/qun-ti-jian-fen-hua-du-liang-fst-zhi/</id>
-    <published>2020-06-24T16:17:58.784Z</published>
-    <updated>2020-07-05T07:57:26.209Z</updated>
+    <link href="https://castel-tao.github.io/2020/07/12/qun-ti-jian-fen-hua-du-liang-fst-zhi/"/>
+    <id>https://castel-tao.github.io/2020/07/12/qun-ti-jian-fen-hua-du-liang-fst-zhi/</id>
+    <published>2020-07-12T06:40:47.579Z</published>
+    <updated>2020-07-15T03:59:25.030Z</updated>
     
     <summary type="html">
     
@@ -152,34 +181,6 @@ diamonds %&gt;%
       <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
     
       <category term="data visualization" scheme="https://castel-tao.github.io/tags/data-visualization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>apply族函数</title>
-    <link href="https://castel-tao.github.io/2020/06/11/apply-zu-han-shu/"/>
-    <id>https://castel-tao.github.io/2020/06/11/apply-zu-han-shu/</id>
-    <published>2020-06-11T07:00:14.583Z</published>
-    <updated>2020-07-04T08:08:05.419Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;其实也没必要记住这么多，不会用了查就行**&lt;/p&gt;
-&lt;p&gt;lapply&lt;br&gt;|&lt;br&gt;|-&amp;gt; 简化版: sapply&lt;br&gt;| | -&amp;gt; 可设置返回值模板: vapply&lt;br&gt;| |-&amp;gt; 多变量版: mapply&lt;br&gt;|&lt;br&gt;|-&amp;gt;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="R" scheme="https://castel-tao.github.io/tags/R/"/>
-    
-      <category term="data cleaning" scheme="https://castel-tao.github.io/tags/data-cleaning/"/>
     
   </entry>
   

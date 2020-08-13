@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>R.colors</title>
+      <link href="/2020/08/13/r.colors/"/>
+      <url>/2020/08/13/r.colors/</url>
+      
+        <content type="html"><![CDATA[<pre class=" language-R"><code class="language-R">plot(0, 0, type = "n", xlim = c(0, 1), ylim = c(0, 1), axes = FALSE, xlab = "", ylab = "")line=30col=22rect(  rep((0:(col - 1)/col),line) ,  sort(rep((0:(line - 1)/line),col),decreasing=T)   ,   rep((1:col/col),line) , sort(rep((1:line/line),col),decreasing=T),  border = "light gray" , col=colors()[seq(1,line*col)])text(  rep((0:(col - 1)/col),line)+0.02 ,  sort(rep((0:(line - 1)/line),col),decreasing=T)+0.015 , colors()[seq(1,line*col)]  , cex=0.9)</code></pre><p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20200813124504.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ggplot </tag>
+            
+            <tag> R </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>定义AMOVA</title>
       <link href="/2020/07/14/ding-yi-amova/"/>
       <url>/2020/07/14/ding-yi-amova/</url>

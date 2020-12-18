@@ -472,7 +472,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-15
+                    2020-12-18
                 </div>
                 
 
@@ -755,6 +755,17 @@ pn <- ggpairs(tmp2[7:ncol(tmp2)],mapping = ggplot2::aes(),
 
         panel.border = element_rect(colour = "black", fill = NA))</code></pre>
 <p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/img/20200524144046.png" alt=""></p>
+<h3 id="带lable的散点图"><a href="#带lable的散点图" class="headerlink" title="带lable的散点图"></a>带lable的散点图</h3><pre class=" language-R"><code class="language-R">library(ggrepel) #需要这个包
+hehe %>% 
+  ggplot(aes(x=X1,y=X2,color = class,shape = class))+
+  geom_point(size =4,alpha=0.8) + 
+  theme_bw() +
+  xlab("罗氏指数") +
+  ylab("达氏指数") +
+  geom_text_repel(aes(label=sample))+ # 这个函数很重要
+  theme(axis.text = element_text(size = 10),
+        axis.title = element_text(size=18))</code></pre>
+<p><img src="https://raw.githubusercontent.com/Castel-Tao/Picbed_PicGo/master/2020.6/20201218121958.png" alt=""></p>
 <h2 id="相关性矩阵-热图"><a href="#相关性矩阵-热图" class="headerlink" title="相关性矩阵-热图"></a>相关性矩阵-热图</h2><pre class=" language-R"><code class="language-R">HEHE2 %>%
  pheatmap(show_rownames = T,
            show_colnames = T,
